@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://rioregla01"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://scripts/tests/minijuegos/rio_reglas.gd"]
+[ext_resource type="Script" path="res://scripts/tests/minijuegos/rio_reglas.gd" id="1"]
 
-[node name="RioReglas" type="Node2D"]
+[node name="RioReglasTest" type="Control"]
+anchors_preset = 0
 script = ExtResource("1")

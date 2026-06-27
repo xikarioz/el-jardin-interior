@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://fstonesstroop01"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://scripts/tests/minijuegos/flores_stroop.gd"]
+[ext_resource type="Script" path="res://scripts/tests/stroop_scene.gd" id="1"]
 
-[node name="FloresStroop" type="Node2D"]
+[node name="StroopTest" type="Control"]
+anchors_preset = 0
 script = ExtResource("1")
