@@ -1,0 +1,62 @@
+[
+  {
+    "page": 71,
+    "text": "El terreno cambia después de la gruta. El sendero se vuelve recto, ancho, despejado, y un viento constante mece las flores silvestres de todos los colores. Entre el viento, una silueta pequeña traza círculos y se acerca en picada: un pájaro gris claro con una mancha amarilla en el pecho. «¡Llegaste! Este es el Camino del Viento. Acá las cosas pasan rápido. A veces pensar menos es pensar mejor.» Se lanza al aire y te espera varios metros adelante.",
+    "animal": "pajaro",
+    "mechanic": ""
+  },
+  {
+    "page": 72,
+    "text": "Apenas das los primeros pasos, empiezan a aparecer figuras entre las flores. Una hoja, una piedra, una estrella, una gota, una llama, una luna. Aparecen por un instante y se desvanecen. El Pájaro vuela adelante y retrocede cada tanto. «¿Viste eso?» Las figuras aparecen cada vez más rápido, a veces dos al mismo tiempo. El viento sopla fuerte y hay que nombrar cada figura antes de que desaparezca. «¡Bien! No todas las mentes pueden ver tan rápido.»",
+    "animal": "pajaro",
+    "mechanic": "velocidad"
+  },
+  {
+    "page": 73,
+    "text": "El camino se abre a un pequeño valle. Ya no hay figuras visibles, pero empezás a escuchar sonidos: un silbato lejano, una rama que se parte, una campana diminuta, un susurro. El Pájaro está posado en una flor con la cabeza inclinada. «¿Escuchaste ese? ¿Cuál era? ¿El primero, el segundo, el que sonó dos veces?» Los sonidos se mezclan y a veces se superponen. Cerrás los ojos y cuando los abrís los sonidos están más claros. «Es como aprender una canción nueva.»",
+    "animal": "pajaro",
+    "mechanic": "velocidad"
+  },
+  {
+    "page": 74,
+    "text": "El camino recto se parte en dos. Los dos senderos se ven iguales, pero el viento sopla distinto: en el de la izquierda es constante y parejo; en el de la derecha viene en ráfagas. El Pájaro está en el punto donde se separan. «No es un camino que se elige con la cabeza. Acá hay que elegir con el cuerpo.» En un camino hay que reaccionar rápido a estímulos, en el otro hay que mantener un ritmo constante. Elegís. El viento cambia y el Pájaro da indicaciones que hay que seguir sin pensar.",
+    "animal": "pajaro",
+    "mechanic": "velocidad"
+  },
+  {
+    "page": 75,
+    "text": "El camino se ensancha y las flores crecen hasta la altura de tu cintura. Son distintas: en el centro de cada una hay una cara hecha de pétalos y polen, con ojos que te miran y expresiones que cambian. El Pájaro se posa junto a una flor de sonrisa amplia. «¿Qué creés que está sintiendo esta flor?» Una flor tiene los pétalos caídos y la boca hacia abajo. «Las flores del camino sienten todo. Muestran lo que sienten en sus caras. No pueden ocultarlo.»",
+    "animal": "pajaro",
+    "mechanic": "socioemocional"
+  },
+  {
+    "page": 76,
+    "text": "Entre las flores, una llama tu atención: está apartada, casi escondida. Sus pétalos están doblados hacia adentro como si quisiera hacerse chiquita, y su cara tiene los ojos cerrados con una expresión triste. El Pájaro se posa suavemente en uno de sus pétalos y la flor no reacciona. «Esta flor está triste. Las flores no pueden estar bien todo el tiempo.» Levanta la vista. «¿Qué harías para ayudarla?» No hay respuestas correctas. Solo ella y vos.",
+    "animal": "pajaro",
+    "mechanic": "socioemocional"
+  },
+  {
+    "page": 77,
+    "text": "El Pájaro ha estado observando todo el tiempo: cómo reaccionaste a las figuras, los sonidos, los caminos, las flores. Ahora baja su vuelo y se pone a la altura de tu hombro. No es una posición que haya usado antes. «Todo bien hasta acá. Pero tengo una pregunta que no viene del camino. Viene de mí.» Hace una pausa. El viento parece detenerse. «¿Cómo te sentís ahora?» No hay opciones, no hay apuro. Solo la pregunta, flotando en el aire.",
+    "animal": "pajaro",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 78,
+    "text": "Después de que respondés, las flores empiezan a cambiar. Las que estaban cerradas se abren, las de colores apagados se vuelven brillantes, las caras que estaban serias ahora tienen media sonrisa. El Pájaro vuela en círculos mirando el cambio. «Las flores reaccionan a cómo estás. Las emociones viajan. Cuando alguien se siente escuchado, las cosas alrededor también se acomodan.» El camino ya no es el mismo. Es más amable. El viento acaricia.",
+    "animal": "pajaro",
+    "mechanic": "socioemocional"
+  },
+  {
+    "page": 79,
+    "text": "Llegás a una curva donde hay cientos de flores apiñadas, todas abiertas, todas brillando. El Pájaro vuela sobre ellas rozando los pétalos con las alas. Cada flor que toca brilla un poco más, y el brillo se propaga como una ola silenciosa. «Cuando una flor se siente bien, las de alrededor también. No porque tengan que hacerlo. Sino porque así funcionan las cosas cuando hay conexión.» No te olvides de esto. De cómo se siente cuando todo está en su lugar.",
+    "animal": "pajaro",
+    "mechanic": "socioemocional"
+  },
+  {
+    "page": 80,
+    "text": "Llegás al final del Camino del Viento. Las flores forman un arco de colores empujadas por el viento. El Pájaro se detiene en lo alto del arco. Por primera vez parece tranquilo. «El Camino del Viento también es aprender a sentir mientras las cosas pasan. Las cosas siempre van a pasar rápido. Pero vos podés aprender a sentir el viento sin que te arrastre.» Se posa en tu hombro. «Tus emociones también son parte del jardín. Y están bien. No hace falta cambiarlas.»",
+    "animal": "pajaro",
+    "mechanic": ""
+  }
+]

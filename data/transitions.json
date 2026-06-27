@@ -1,0 +1,14 @@
+{
+  "chapter_zone_map": {
+    "01": "jardin-central",
+    "02": "bosque-atencion",
+    "03": "rio-memoria",
+    "04": "montana-razonamiento",
+    "05": "valle-lenguaje",
+    "06": "torre-matematicas",
+    "07": "gruta-visual",
+    "08": "camino-velocidad",
+    "09": "espejo",
+    "10": "jardin-central"
+  }
+}
