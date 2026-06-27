@@ -1,109 +1,250 @@
 [gd_scene load_steps=4 format=3 uid="uid://bosqueatencion01"]
 
-[ext_resource type="Script" path="res://scripts/companions/AnimalCompanion.gd" id="1"]
+[ext_resource type="Script" path="res://scenes/bosque-atencion/bosque_atencion.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/companions/AnimalCompanion.gd" id="2"]
 
-[sub_resource type="TileSet" id="1"]
-tile_size = Vector2i(32, 32)
-sources/0 = 0
-0:name = "placeholder"
-
-[sub_resource type="RectangleShape2D" id="2"]
+[sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(64, 64)
 
-[sub_resource type="RectangleShape2D" id="3"]
+[sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(32, 32)
 
 [node name="BosqueAtencion" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("1")
-cell_size = Vector2(32, 32)
-format = 1
+[node name="Background" type="ColorRect" parent="."]
+z_index = -10
+position = Vector2(-2000, -2000)
+size = Vector2(4000, 4000)
+color = Color(0.12, 0.3, 0.15, 1)
+
+[node name="SkyGradient" type="ColorRect" parent="."]
+z_index = -9
+position = Vector2(0, 0)
+size = Vector2(2000, 300)
+color = Color(0.35, 0.55, 0.3, 0.5)
+
+[node name="Ground" type="ColorRect" parent="."]
+z_index = -5
+position = Vector2(0, 470)
+size = Vector2(2000, 180)
+color = Color(0.22, 0.42, 0.16, 1)
+
+[node name="GroundDetail" type="ColorRect" parent="."]
+z_index = -4
+position = Vector2(0, 480)
+size = Vector2(2000, 60)
+color = Color(0.18, 0.38, 0.14, 0.6)
+
+[node name="SunLight" type="DirectionalLight2D" parent="."]
+enabled = true
+energy = 0.75
+color = Color(1, 0.95, 0.82, 1)
+
+[node name="AmbientGlow" type="PointLight2D" parent="."]
+enabled = true
+energy = 0.3
+color = Color(0.6, 0.8, 0.4, 0.5)
+position = Vector2(1000, 200)
+range_item_cull_distance = 0
+shadow_enabled = false
+
+[node name="Decorations" type="Node2D" parent="."]
+z_index = 0
+script = ExtResource("1")
+
+[node name="LeafParticles" type="CPUParticles2D" parent="."]
+z_index = 3
+emitting = true
+amount = 25
+lifetime = 6.0
+preprocess = 3.0
+spread = 40.0
+gravity = Vector2(5, 55)
+initial_velocity = 12.0
+initial_velocity_random = 0.5
+scale_amount = 3.0
+scale_amount_random = 0.6
+color = Color(0.75, 0.55, 0.2, 0.7)
+hue_variation = 0.25
+angle = 0.0
+angle_random = 0.8
+angular_velocity = 20.0
+angular_velocity_random = 0.8
+linear_accel = -2.0
+linear_accel_random = 0.3
+damping = 0.5
+damping_random = 0.2
+
+[node name="FireflyParticles" type="CPUParticles2D" parent="."]
+z_index = 4
+emitting = true
+amount = 14
+lifetime = 4.5
+preprocess = 2.0
+spread = 180.0
+gravity = Vector2(3, -6)
+initial_velocity = 8.0
+initial_velocity_random = 0.7
+scale_amount = 2.5
+scale_amount_random = 0.5
+color = Color(0.85, 0.95, 0.4, 0.85)
+hue_variation = 0.08
+angle = 0.0
+angle_random = 1.0
+angular_velocity = 15.0
+angular_velocity_random = 0.9
+linear_accel = 1.0
+linear_accel_random = 0.4
+damping = 0.3
 
 [node name="Player" type="Node2D" parent="."]
-position = Vector2(608, 1248)
+z_index = 5
+position = Vector2(100, 400)
+
+[node name="Body" type="ColorRect" parent="Player"]
+size = Vector2(28, 44)
+color = Color(0.85, 0.65, 0.65, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+enabled = true
+zoom = Vector2(2, 2)
 
 [node name="ZorroNPC" type="Node2D" parent="."]
-position = Vector2(608, 1248)
-script = ExtResource("1")
+z_index = 5
+position = Vector2(320, 410)
+script = ExtResource("2")
 animal_type = 1
 companion_name = "Zorro"
 activation_radius = 200.0
 
+[node name="Body" type="ColorRect" parent="ZorroNPC"]
+size = Vector2(24, 14)
+color = Color(0.9, 0.65, 0.3, 1)
+
+[node name="Head" type="ColorRect" parent="ZorroNPC"]
+size = Vector2(14, 10)
+color = Color(0.9, 0.65, 0.3, 1)
+position = Vector2(18, -4)
+
+[node name="Tail" type="ColorRect" parent="ZorroNPC"]
+size = Vector2(10, 6)
+color = Color(0.85, 0.55, 0.2, 1)
+position = Vector2(-14, -2)
+
+[node name="EarLeft" type="ColorRect" parent="ZorroNPC"]
+size = Vector2(4, 5)
+color = Color(0.95, 0.7, 0.35, 1)
+position = Vector2(14, -10)
+
+[node name="EarRight" type="ColorRect" parent="ZorroNPC"]
+size = Vector2(4, 5)
+color = Color(0.95, 0.7, 0.35, 1)
+position = Vector2(24, -10)
+
 [node name="PuzzleZones" type="Node" parent="."]
 
 [node name="StroopZone1" type="Area2D" parent="PuzzleZones"]
-position = Vector2(320, 256)
+groups = ["test_zone"]
+position = Vector2(480, 320)
+metadata/test_type = "flores_stroop"
+metadata/biome = "bosque-atencion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/StroopZone1"]
-shape = SubResource("3")
+shape = SubResource("1")
+
+[node name="ZoneLabel" type="Label" parent="PuzzleZones/StroopZone1"]
+position = Vector2(-80, -48)
+size = Vector2(220, 40)
+text = "🌸 Flores de Atención"
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 0.8)
 
 [node name="StroopZone2" type="Area2D" parent="PuzzleZones"]
-position = Vector2(960, 160)
+groups = ["test_zone"]
+position = Vector2(1080, 280)
+metadata/test_type = "flores_stroop"
+metadata/biome = "bosque-atencion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/StroopZone2"]
-shape = SubResource("3")
+shape = SubResource("1")
+
+[node name="ZoneLabel" type="Label" parent="PuzzleZones/StroopZone2"]
+position = Vector2(-80, -48)
+size = Vector2(220, 40)
+text = "🌸 Flores de Atención"
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 0.8)
 
 [node name="StroopZone3" type="Area2D" parent="PuzzleZones"]
-position = Vector2(640, 960)
+groups = ["test_zone"]
+position = Vector2(760, 560)
+metadata/test_type = "flores_stroop"
+metadata/biome = "bosque-atencion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/StroopZone3"]
-shape = SubResource("3")
+shape = SubResource("1")
+
+[node name="ZoneLabel" type="Label" parent="PuzzleZones/StroopZone3"]
+position = Vector2(-80, -48)
+size = Vector2(220, 40)
+text = "🌸 Flores de Atención"
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 0.8)
 
 [node name="FlankerZone" type="Area2D" parent="PuzzleZones"]
-position = Vector2(800, 640)
+groups = ["test_zone"]
+position = Vector2(900, 420)
+metadata/test_type = "flores_stroop"
+metadata/biome = "bosque-atencion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/FlankerZone"]
-shape = SubResource("2")
+shape = SubResource("1")
 
-[node name="CptZones" type="Node" parent="PuzzleZones"]
+[node name="ZoneLabel" type="Label" parent="PuzzleZones/FlankerZone"]
+position = Vector2(-80, -48)
+size = Vector2(220, 40)
+text = "➡️ Flechas Flanker"
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 0.8)
 
-[node name="CPT1" type="Area2D" parent="PuzzleZones/CptZones"]
-position = Vector2(160, 320)
+[node name="CptZone" type="Area2D" parent="PuzzleZones"]
+groups = ["test_zone"]
+position = Vector2(1100, 480)
+metadata/test_type = "luciernagas"
+metadata/biome = "bosque-atencion"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CptZones/CPT1"]
-shape = SubResource("3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CptZone"]
+shape = SubResource("1")
 
-[node name="CPT2" type="Area2D" parent="PuzzleZones/CptZones"]
-position = Vector2(480, 160)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CptZones/CPT2"]
-shape = SubResource("3")
-
-[node name="CPT3" type="Area2D" parent="PuzzleZones/CptZones"]
-position = Vector2(1120, 480)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CptZones/CPT3"]
-shape = SubResource("3")
-
-[node name="CPT4" type="Area2D" parent="PuzzleZones/CptZones"]
-position = Vector2(800, 960)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CptZones/CPT4"]
-shape = SubResource("3")
-
-[node name="CPT5" type="Area2D" parent="PuzzleZones/CptZones"]
-position = Vector2(1440, 640)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CptZones/CPT5"]
-shape = SubResource("3")
+[node name="ZoneLabel" type="Label" parent="PuzzleZones/CptZone"]
+position = Vector2(-80, -48)
+size = Vector2(220, 40)
+text = "⭐ Estrellas CPT"
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 0.8)
 
 [node name="Conexiones" type="Node" parent="."]
 
 [node name="SalidaJardin" type="Area2D" parent="Conexiones"]
 position = Vector2(608, 0)
+metadata/test_type = ""
+metadata/biome = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaJardin"]
-shape = SubResource("3")
+shape = SubResource("2")
 
 [node name="SalidaRio" type="Area2D" parent="Conexiones"]
-position = Vector2(1568, 480)
+position = Vector2(1880, 400)
+metadata/test_type = ""
+metadata/biome = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaRio"]
-shape = SubResource("3")
+shape = SubResource("2")
 
 [node name="SalidaValle" type="Area2D" parent="Conexiones"]
-position = Vector2(1568, 0)
+position = Vector2(1880, 80)
+metadata/test_type = ""
+metadata/biome = ""
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaValle"]
-shape = SubResource("3")
+shape = SubResource("2")
