@@ -53,33 +53,6 @@ func _on_test_zone_entered(body, zone: Area2D):
 		if test_type != "":
 			launch_minigame(test_type, biome)
 
-func on_test_zone_entered(test_type: String):
-	if minigame_active:
-		return
-	minigame_active = true
-
-	var scene_path = "res://scenes/tests/%s.tscn" % test_type
-	var packed = load(scene_path)
-	if not packed:
-		minigame_active = false
-		return
-
-	var instance = packed.instantiate()
-	current_minigame = instance
-
-	if instance.has_signal("completed"):
-		instance.completed.connect(_on_minigame_completed.bind("bosque-atencion"))
-
-	var player = get_node("Player")
-	if player:
-		player.process_mode = Node.PROCESS_MODE_DISABLED
-		player.visible = false
-
-	add_child(instance)
-
-	var profile = get_personality().get_profile() if get_personality() and get_personality().has_method("get_profile") else {}
-	show_message("🧪 Observed atentamente...\n" + profile.get("name", ""), 1.5)
-
 func launch_minigame(test_type: String, biome: String = "jardin-central"):
 	if minigame_active:
 		return
@@ -240,11 +213,7 @@ func _toggle_menu():
 		get_tree().paused = true
 
 func on_test_zone_entered(test_type: String):
-	var path = "res://scenes/tests/%s_scene.tscn" % test_type
-	if ResourceLoader.exists(path):
-		var scene = load(path).instantiate()
-		add_child(scene)
-		scene.completed.connect(_on_stroop_completed.bind(test_type))
+	launch_minigame(test_type, "bosque-atencion")
 
 func _on_stroop_completed(score: float, details: Dictionary, test_type: String):
 	get_personality().register_result({
