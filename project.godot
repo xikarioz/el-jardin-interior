@@ -26,10 +26,6 @@ window/size/stretch/aspect="keep"
 
 [input]
 
-move_left=[{key=65}, {key=16777231}]
-move_right=[{key=68}, {key=16777233}]
-move_up=[{key=87}, {key=16777232}]
-move_down=[{key=83}, {key=16777234}]
 touch/emulate_touch=false
 
 [rendering]
