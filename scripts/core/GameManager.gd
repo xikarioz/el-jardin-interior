@@ -29,6 +29,10 @@ func _process(delta):
 			player.position += move
 
 func _initialize_subsystems():
+	var prog = load("res://scripts/core/ProgressionManager.gd").new()
+	add_child(prog)
+	prog.name = "ProgressionManager"
+
 	var dd = load("res://scripts/core/DialogLoader.gd").new()
 	add_child(dd)
 
@@ -112,6 +116,9 @@ func get_feature_extractor():
 
 func get_input_manager():
 	return get_node_or_null("InputManager")
+
+func get_progression():
+	return get_node_or_null("ProgressionManager")
 
 func get_persistence():
 	return get_node_or_null("Persistence")

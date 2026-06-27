@@ -1,0 +1,62 @@
+[
+  {
+    "page": 61,
+    "text": "El sendero se estrecha hasta volverse un pasillo de piedra. Cristales crecen de las paredes como ramas congeladas, algunos transparentes, otros con un azul profundo en su interior. Al fondo, el Zorro está sentado sobre una roca plana con los ojos brillando. «Acá las cosas no son lo que parecen. Cada espejo muestra una verdad distinta.» La gruta te pide que mires dos veces antes de decidir.",
+    "animal": "zorro",
+    "mechanic": ""
+  },
+  {
+    "page": 62,
+    "text": "La primera sala está llena de columnas de cristal. En el centro hay una base de piedra con una forma irregular, y alrededor flotan piezas de cristal que giran lentamente: una estrella, un rombo, una media luna. El Zorro observa desde la pared sin decir nada. Apoyás la mano sobre la pieza más simple y la base emite un destello. «No importa si no sale al primer intento. Los cristales también necesitan tiempo para encontrar su forma.»",
+    "animal": "zorro",
+    "mechanic": "visuoespacial"
+  },
+  {
+    "page": 63,
+    "text": "La segunda sala es un laberinto de espejos. Cada panel refleja el pasillo de manera distinta: algunos estiran la imagen, otros la encogen, otros la muestran al revés. El Zorro está al otro lado, visible en tres espejos distintos en tres posiciones diferentes. «El camino recto no siempre es el correcto. A veces hay que dejar de mirar el reflejo y mirar lo que hay entre los reflejos.» Cerrás los ojos un segundo y al abrirlos ves el pasillo angosto que era la verdadera salida.",
+    "animal": "zorro",
+    "mechanic": "visuoespacial"
+  },
+  {
+    "page": 64,
+    "text": "La tercera sala es más pequeña. En el centro hay un pedestal con un dibujo tallado: la figura de un pájaro al que le falta el ala derecha. Alrededor hay piezas sueltas de piedra: una curva, una puntiaguda, una con bordes dentados. El Zorro está sentado en el piso mirando las piezas con curiosidad. Una de las piezas coincide con el borde del pájaro. «No hace falta que encaje perfecto. Lo importante es que sepas que viste lo que faltaba.»",
+    "animal": "zorro",
+    "mechanic": "visuoespacial"
+  },
+  {
+    "page": 65,
+    "text": "La cuarta sala está a oscuras. Un haz de luz ilumina una pared de piedra lisa, y sobre ella se mueven sombras sin origen visible. «Todo lo que ves ahí empezó siendo otra cosa. Una flor, una hoja, un pájaro, una nube. Pero la luz las cambió. Ahora tenés que adivinar qué eran antes.» Una sombra se estira y encoge con bordes que podrían ser alas o podrían ser hojas. «No pienses demasiado. La primera forma que veas, esa es.»",
+    "animal": "zorro",
+    "mechanic": "visuoespacial"
+  },
+  {
+    "page": 66,
+    "text": "En la quinta sala, el suelo está cubierto de piezas de mosaico desordenadas. En la pared del fondo hay un marco vacío con la forma exacta del mosaico completo. «Esto era un dibujo que el viento de la gruta desarmó.» Cada pieza tiene un fragmento de color: cielo, tronco, pasto, una flor naranja. Las piezas no encajan solas, pero cuando encontrás el borde correcto el color se continúa. «Si no encaja, no es ahí. No es un error. Es información.»",
+    "animal": "zorro",
+    "mechanic": "visuoespacial"
+  },
+  {
+    "page": 67,
+    "text": "La sexta sala es un mapa gigante tallado en el piso: calles, plazas, un río, montañas en miniatura. El Zorro apoya una pata sobre un punto. «Esta es la salida. Pero para llegar necesitás encontrar primero dónde estás parado ahora.» Una voz empieza a dar indicaciones que se encadenan como eslabones: «tres cuadras al norte», «hacia donde el río se curva». Seguís las instrucciones con el dedo, y al final tu dedo llega a una X que se ilumina.",
+    "animal": "zorro",
+    "mechanic": "visuoespacial"
+  },
+  {
+    "page": 68,
+    "text": "Entre sala y sala hay un claro dentro de la gruta. Un haz de luz natural entra por una abertura en el techo. El Zorro ya está ahí, recostado con elegancia. «Tu mirada encuentra caminos donde otros solo ven paredes.» Deja caer una piedrita y el sonido rebota en las paredes. «No es poca cosa. El jardín necesita de esa mirada. La que no se rinde cuando las cosas se ponen difíciles.»",
+    "animal": "zorro",
+    "mechanic": ""
+  },
+  {
+    "page": 69,
+    "text": "La última sala es la más simple: un espejo enorme del tamaño de una puerta, con marco de plata deslustrada y arabescos como ramas de árbol. El Zorro no entra. «Esta parte es solo tuya.» Avanzás hacia el espejo. Tu reflejo sonríe, pero vos no sonreíste. Apoyás la mano sobre el vidrio y está tibio. Una sensación atraviesa el vidrio y te llega al pecho: «estás más cerca de lo que creés. Todo lo que buscás ya está en vos.»",
+    "animal": "zorro",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 70,
+    "text": "Salís de la última sala y la gruta entera ha cambiado. Los cristales resplandecen, los espejos devuelven luz clara, los mosaicos forman dibujos completos. El Zorro camina a tu lado con destellos cobrizos en el pelaje. «Cuando alguien aprende a mirar bien, las cosas cambian. No es que la gruta se haya vuelto más luminosa. Es que tu mirada ya no se deja engañar.» Salís. Los cristales cantan como campanas lejanas. «El jardín sigue. Y vos también.»",
+    "animal": "zorro",
+    "mechanic": ""
+  }
+]
