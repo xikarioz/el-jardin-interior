@@ -1,0 +1,641 @@
+{
+  "meta": {
+    "titulo": "Árbol de Preguntas - Perfilamiento Terapéutico",
+    "descripcion": "Árbol branching de 25 preguntas (5 por animal) que trazan el perfil de personalidad del paciente sin que parezca un test. Cada respuesta ajusta rasgos del modelo OCEAN.",
+    "rasgos": {
+      "openness": "apertura",
+      "conscientiousness": "responsabilidad",
+      "extraversion": "extraversión",
+      "agreeableness": "amabilidad",
+      "neuroticism": "neuroticismo"
+    }
+  },
+  "tortuga": {
+    "presentacion": "La Tortuga te mira con calma. 'Antes de seguir, quiero conocerte un poco. No apures las respuestas. El jardín tiene tiempo.'",
+    "pregunta1": {
+      "id": "tortuga_resolucion",
+      "texto": "¿Qué es lo que más te gusta de cómo resolvés las cosas?",
+      "target_trait": "conscientiousness",
+      "respuestas": {
+        "paciencia": {
+          "texto": "Que voy paso a paso sin apurarme",
+          "siguiente": "pregunta2",
+          "delta": 5
+        },
+        "rapidez": {
+          "texto": "Que resuelvo rápido y no me enredo",
+          "siguiente": "pregunta3",
+          "delta": -2
+        },
+        "no_se": {
+          "texto": "Nunca lo pensé, no sé",
+          "siguiente": "pregunta4",
+          "delta": 0
+        }
+      }
+    },
+    "pregunta2": {
+      "id": "tortuga_fracaso",
+      "texto": "Cuando algo no sale como esperabas, ¿qué hacés primero?",
+      "target_trait": "neuroticism",
+      "respuestas": {
+        "analizar": {
+          "texto": "Trato de entender qué pasó",
+          "siguiente": "pregunta3",
+          "delta": -3
+        },
+        "enojar": {
+          "texto": "Me enojo y necesito un momento",
+          "siguiente": "pregunta4",
+          "delta": 5
+        },
+        "seguir": {
+          "texto": "Busco otro camino directo",
+          "siguiente": "pregunta5",
+          "delta": -2
+        }
+      }
+    },
+    "pregunta3": {
+      "id": "tortuga_plan",
+      "texto": "¿Qué preferís: tener todo planeado o dejar que fluya?",
+      "target_trait": "openness",
+      "respuestas": {
+        "planeado": {
+          "texto": "Planear me da tranquilidad",
+          "siguiente": "pregunta4",
+          "delta": -3
+        },
+        "fluir": {
+          "texto": "Lo mejor surge sin planear",
+          "siguiente": "pregunta5",
+          "delta": 5
+        },
+        "depende": {
+          "texto": "Depende de qué se trate",
+          "siguiente": "alternativa_zorro_p1",
+          "delta": 2
+        }
+      }
+    },
+    "pregunta4": {
+      "id": "tortuga_critica",
+      "texto": "Cuando alguien te critica, ¿cómo reaccionás?",
+      "target_trait": "agreeableness",
+      "respuestas": {
+        "escuchar": {
+          "texto": "Escucho, a veces aprendo algo",
+          "siguiente": "pregunta5",
+          "delta": 5
+        },
+        "defender": {
+          "texto": "Me pongo a la defensiva",
+          "siguiente": "pregunta5",
+          "delta": -3
+        },
+        "ignorar": {
+          "texto": "Depende de quién venga",
+          "siguiente": "alternativa_buho_p1",
+          "delta": 1
+        }
+      }
+    },
+    "pregunta5": {
+      "id": "tortuga_energia",
+      "texto": "¿Qué te da más energía: estar con otros o estar solo?",
+      "target_trait": "extraversion",
+      "respuestas": {
+        "otros": {
+          "texto": "Estar con gente me recarga",
+          "siguiente": "cierre",
+          "delta": 5
+        },
+        "solo": {
+          "texto": "Mi tiempo a solas es sagrado",
+          "siguiente": "cierre",
+          "delta": -3
+        },
+        "equilibrio": {
+          "texto": "Los dos, según el momento",
+          "siguiente": "cierre",
+          "delta": 1
+        }
+      }
+    }
+  },
+  "zorro": {
+    "presentacion": "El Zorro se sienta en una rama baja, moviendo la cola. 'Te vi moverte por el bosque. Quiero preguntarte algo.'",
+    "pregunta1": {
+      "id": "zorro_atencion",
+      "texto": "Cuando algo te distrae mucho, ¿volvés a lo que estabas haciendo?",
+      "target_trait": "conscientiousness",
+      "respuestas": {
+        "si_siempre": {
+          "texto": "Sí, retomo hasta terminarlo",
+          "siguiente": "pregunta2",
+          "delta": 5
+        },
+        "a_veces": {
+          "texto": "A veces, si me acuerdo",
+          "siguiente": "pregunta3",
+          "delta": 1
+        },
+        "dificil": {
+          "texto": "Me cuesta mucho retomar",
+          "siguiente": "pregunta4",
+          "delta": -4
+        }
+      }
+    },
+    "pregunta2": {
+      "id": "zorro_adaptacion",
+      "texto": "¿Te resulta más fácil adaptarte a lo nuevo o preferís lo conocido?",
+      "target_trait": "openness",
+      "respuestas": {
+        "nuevo": {
+          "texto": "Lo nuevo me entusiasma",
+          "siguiente": "pregunta3",
+          "delta": 5
+        },
+        "conocido": {
+          "texto": "Lo conocido me da paz",
+          "siguiente": "pregunta4",
+          "delta": -3
+        },
+        "depende": {
+          "texto": "Depende del cambio",
+          "siguiente": "pregunta5",
+          "delta": 1
+        }
+      }
+    },
+    "pregunta3": {
+      "id": "zorro_grupo",
+      "texto": "En un grupo, ¿participás activamente o escuchás más?",
+      "target_trait": "extraversion",
+      "respuestas": {
+        "participar": {
+          "texto": "Participo, me gusta opinar",
+          "siguiente": "pregunta4",
+          "delta": 5
+        },
+        "escuchar": {
+          "texto": "Escucho casi todo el tiempo",
+          "siguiente": "pregunta5",
+          "delta": -4
+        },
+        "depende_grupo": {
+          "texto": "Depende del grupo y el tema",
+          "siguiente": "alternativa_tortuga_p5",
+          "delta": 1
+        }
+      }
+    },
+    "pregunta4": {
+      "id": "zorro_ayuda",
+      "texto": "Si alguien está mal, ¿dejás lo tuyo para acompañarlo?",
+      "target_trait": "agreeableness",
+      "respuestas": {
+        "si_dejo": {
+          "texto": "Sí, siempre priorizo a quien sufre",
+          "siguiente": "pregunta5",
+          "delta": 5
+        },
+        "depende_energia": {
+          "texto": "Si tengo energía, sí",
+          "siguiente": "pregunta5",
+          "delta": 2
+        },
+        "me_cuesta": {
+          "texto": "Me cuesta, no sé bien qué hacer",
+          "siguiente": "alternativa_mariposa_p1",
+          "delta": -3
+        }
+      }
+    },
+    "pregunta5": {
+      "id": "zorro_cambio",
+      "texto": "Cuando todo cambia de repente, ¿cómo te sentís?",
+      "target_trait": "neuroticism",
+      "respuestas": {
+        "tranquilo": {
+          "texto": "Lo tomo con calma, me adapto",
+          "siguiente": "cierre",
+          "delta": -4
+        },
+        "ansioso": {
+          "texto": "Me pongo ansioso, necesito tiempo",
+          "siguiente": "cierre",
+          "delta": 5
+        },
+        "emociones": {
+          "texto": "Siento de todo, pero lo proceso",
+          "siguiente": "cierre",
+          "delta": 2
+        }
+      }
+    }
+  },
+  "buho": {
+    "presentacion": "El Búho parpadea lentamente. Desde su rama se ve toda la pradera. 'Las preguntas que importan no tienen respuesta fácil. Pero merecen ser hechas.'",
+    "pregunta1": {
+      "id": "buho_pasado",
+      "texto": "Cuando pensás en tu pasado, ¿qué predomina?",
+      "target_trait": "neuroticism",
+      "respuestas": {
+        "gratitud": {
+          "texto": "Gratitud por lo vivido",
+          "siguiente": "pregunta2",
+          "delta": -4
+        },
+        "nostalgia": {
+          "texto": "Nostalgia, a veces tristeza",
+          "siguiente": "pregunta3",
+          "delta": 3
+        },
+        "acepto": {
+          "texto": "Acepto lo que fue, sin más",
+          "siguiente": "pregunta4",
+          "delta": -1
+        }
+      }
+    },
+    "pregunta2": {
+      "id": "buho_curiosidad",
+      "texto": "¿Te gusta explorar ideas nuevas aunque no tengan una aplicación práctica?",
+      "target_trait": "openness",
+      "respuestas": {
+        "si_siempre": {
+          "texto": "Me encanta, por el placer de saber",
+          "siguiente": "pregunta3",
+          "delta": 5
+        },
+        "practico": {
+          "texto": "Prefiero lo que sirve para algo",
+          "siguiente": "pregunta4",
+          "delta": -3
+        },
+        "a_veces": {
+          "texto": "A veces, cuando tengo tiempo",
+          "siguiente": "pregunta5",
+          "delta": 1
+        }
+      }
+    },
+    "pregunta3": {
+      "id": "buho_palabra",
+      "texto": "Cuando hacés una promesa, ¿la cumplís siempre?",
+      "target_trait": "conscientiousness",
+      "respuestas": {
+        "si_siempre": {
+          "texto": "Sí, mi palabra es mi compromiso",
+          "siguiente": "pregunta4",
+          "delta": 5
+        },
+        "intento": {
+          "texto": "Intento, pero a veces no puedo",
+          "siguiente": "pregunta5",
+          "delta": 2
+        },
+        "depende": {
+          "texto": "Depende de la promesa",
+          "siguiente": "alternativa_zorro_p2",
+          "delta": -1
+        }
+      }
+    },
+    "pregunta4": {
+      "id": "buho_distinto",
+      "texto": "¿Qué hacés si un amigo elige algo muy distinto a lo que vos elegirías?",
+      "target_trait": "agreeableness",
+      "respuestas": {
+        "respeto": {
+          "texto": "Lo respeto, es su camino",
+          "siguiente": "pregunta5",
+          "delta": 5
+        },
+        "aconsejo": {
+          "texto": "Le digo lo que pienso pero lo apoyo",
+          "siguiente": "pregunta5",
+          "delta": 3
+        },
+        "me_cuesta": {
+          "texto": "Me cuesta aceptar que elija distinto",
+          "siguiente": "alternativa_pajaro_p1",
+          "delta": -4
+        }
+      }
+    },
+    "pregunta5": {
+      "id": "buho_compartir",
+      "texto": "Preferís compartir tus pensamientos o guardarlos para vos?",
+      "target_trait": "extraversion",
+      "respuestas": {
+        "comparto": {
+          "texto": "Comparto, me hace bien",
+          "siguiente": "cierre",
+          "delta": 4
+        },
+        "guardo": {
+          "texto": "Los guardo, son míos",
+          "siguiente": "cierre",
+          "delta": -4
+        },
+        "depende_con quien": {
+          "texto": "Depende con quién",
+          "siguiente": "cierre",
+          "delta": 1
+        }
+      }
+    }
+  },
+  "pajaro": {
+    "presentacion": "El Pájaro da vueltas en el aire. No se queda quieto ni cuando habla. 'Las preguntas son como el viento. Si no las soltás, te quedás sin aire.'",
+    "pregunta1": {
+      "id": "pajaro_imprevisto",
+      "texto": "¿Cómo reaccionás cuando algo no sale como planeaste?",
+      "target_trait": "neuroticism",
+      "respuestas": {
+        "calma": {
+          "texto": "Lo tomo con calma, busco alternativas",
+          "siguiente": "pregunta2",
+          "delta": -4
+        },
+        "frustracion": {
+          "texto": "Me frustro, me cuesta soltarlo",
+          "siguiente": "pregunta3",
+          "delta": 5
+        },
+        "pausa": {
+          "texto": "Necesito una pausa y después sigo",
+          "siguiente": "pregunta4",
+          "delta": 1
+        }
+      }
+    },
+    "pregunta2": {
+      "id": "pajaro_novedad",
+      "texto": "¿Con qué frecuencia buscás actividades nuevas?",
+      "target_trait": "openness",
+      "respuestas": {
+        "siempre": {
+          "texto": "Siempre, me aburre la rutina",
+          "siguiente": "pregunta3",
+          "delta": 5
+        },
+        "poco": {
+          "texto": "Poco, lo conocido me funciona",
+          "siguiente": "pregunta4",
+          "delta": -4
+        },
+        "equilibrio": {
+          "texto": "Un equilibrio entre rutina y novedad",
+          "siguiente": "pregunta5",
+          "delta": 1
+        }
+      }
+    },
+    "pregunta3": {
+      "id": "pajaro_orden",
+      "texto": "¿Te considerás una persona ordenada?",
+      "target_trait": "conscientiousness",
+      "respuestas": {
+        "mucho": {
+          "texto": "Mucho, todo en su lugar",
+          "siguiente": "pregunta4",
+          "delta": 5
+        },
+        "poco": {
+          "texto": "Poco, mi orden es mental",
+          "siguiente": "pregunta5",
+          "delta": -3
+        },
+        "caos": {
+          "texto": "El caos me funciona",
+          "siguiente": "alternativa_buho_p2",
+          "delta": -5
+        }
+      }
+    },
+    "pregunta4": {
+      "id": "pajaro_ayuda_ofrecer",
+      "texto": "Cuando alguien necesita ayuda, ¿te ofrecés aunque no te lo pidan?",
+      "target_trait": "agreeableness",
+      "respuestas": {
+        "si_ofrezco": {
+          "texto": "Sí, me anticipo a ayudar",
+          "siguiente": "pregunta5",
+          "delta": 5
+        },
+        "espero": {
+          "texto": "Espero que me pida ayuda",
+          "siguiente": "pregunta5",
+          "delta": 1
+        },
+        "no_se": {
+          "texto": "No sé si molesto si me ofrezco",
+          "siguiente": "alternativa_tortuga_p2",
+          "delta": -3
+        }
+      }
+    },
+    "pregunta5": {
+      "id": "pajaro_soledad",
+      "texto": "¿Recargás energía en grupo o en soledad?",
+      "target_trait": "extraversion",
+      "respuestas": {
+        "grupo": {
+          "texto": "En grupo, la gente me recarga",
+          "siguiente": "cierre",
+          "delta": 5
+        },
+        "soledad": {
+          "texto": "En soledad necesito desconectar",
+          "siguiente": "cierre",
+          "delta": -4
+        },
+        "ambos": {
+          "texto": "Depende del momento",
+          "siguiente": "cierre",
+          "delta": 0
+        }
+      }
+    }
+  },
+  "mariposa": {
+    "presentacion": "La Mariposa aletea suavemente frente a vos. Sus alas tienen un brillo que cambia con la luz. 'Las transformaciones más lindas empiezan con una pregunta chica.'",
+    "pregunta1": {
+      "id": "mariposa_cambios",
+      "texto": "¿Cómo vivís los cambios grandes?",
+      "target_trait": "openness",
+      "respuestas": {
+        "entusiasmo": {
+          "texto": "Con entusiasmo, son oportunidades",
+          "siguiente": "pregunta2",
+          "delta": 5
+        },
+        "miedo": {
+          "texto": "Con miedo, me desestabilizan",
+          "siguiente": "pregunta3",
+          "delta": -4
+        },
+        "proceso": {
+          "texto": "Los proceso, Buenos y malos",
+          "siguiente": "pregunta4",
+          "delta": 1
+        }
+      }
+    },
+    "pregunta2": {
+      "id": "mariposa_tristeza",
+      "texto": "Cuando estás triste, ¿buscás compañía o preferís estar solo?",
+      "target_trait": "extraversion",
+      "respuestas": {
+        "compania": {
+          "texto": "Busco compañía, me sostiene",
+          "siguiente": "pregunta3",
+          "delta": 4
+        },
+        "solo": {
+          "texto": "Prefiero estar solo, procesar",
+          "siguiente": "pregunta4",
+          "delta": -2
+        },
+        "depende_tristeza": {
+          "texto": "Depende de la tristeza",
+          "siguiente": "pregunta5",
+          "delta": 0
+        }
+      }
+    },
+    "pregunta3": {
+      "id": "mariposa_juicio",
+      "texto": "¿Te afecta mucho lo que piensen los demás de vos?",
+      "target_trait": "neuroticism",
+      "respuestas": {
+        "mucho": {
+          "texto": "Mucho, me importa su opinión",
+          "siguiente": "pregunta4",
+          "delta": 5
+        },
+        "poco": {
+          "texto": "Poco, sé quién soy",
+          "siguiente": "pregunta5",
+          "delta": -4
+        },
+        "algunas": {
+          "texto": "De algunas personas sí",
+          "siguiente": "alternativa_buho_p3",
+          "delta": 2
+        }
+      }
+    },
+    "pregunta4": {
+      "id": "mariposa_constancia",
+      "texto": "¿Sos de las que terminan lo que empiezan?",
+      "target_trait": "conscientiousness",
+      "respuestas": {
+        "si_siempre": {
+          "texto": "Siempre, no me gusta dejar a medias",
+          "siguiente": "pregunta5",
+          "delta": 5
+        },
+        "a_veces": {
+          "texto": "Casi siempre, pero a veces no",
+          "siguiente": "pregunta5",
+          "delta": 2
+        },
+        "empiezo_mucho": {
+          "texto": "Empiezo mucho y termino poco",
+          "siguiente": "alternativa_zorro_p4",
+          "delta": -5
+        }
+      }
+    },
+    "pregunta5": {
+      "id": "mariposa_diferencia",
+      "texto": "Si alguien piensa distinto a vos, ¿intentás entenderlo o te cuesta?",
+      "target_trait": "agreeableness",
+      "respuestas": {
+        "entiendo": {
+          "texto": "Intento entender su mirada",
+          "siguiente": "cierre",
+          "delta": 5
+        },
+        "me_cuesta": {
+          "texto": "Me cuesta, tengo mis convicciones",
+          "siguiente": "cierre",
+          "delta": -3
+        },
+        "dialogo": {
+          "texto": "Depende, si hay diálogo sí",
+          "siguiente": "cierre",
+          "delta": 2
+        }
+      }
+    }
+  },
+
+  "alternativas": {
+    "alternativa_zorro_p1": {
+      "origen": "tortuga_pregunta3_depende",
+      "animal": "zorro",
+      "pregunta": "pregunta1",
+      "texto_conector": "La Tortuga sonríe. 'Sabía que dirías eso. El Zorro quiere hacerte una pregunta también.'"
+    },
+    "alternativa_zorro_p2": {
+      "origen": "buho_pregunta3_depende",
+      "animal": "zorro",
+      "pregunta": "pregunta2",
+      "texto_conector": "El Búho inclina la cabeza. 'Esa respuesta es para el Zorro. Él entiende de matices.'"
+    },
+    "alternativa_zorro_p4": {
+      "origen": "mariposa_pregunta4_empiezo_mucho",
+      "animal": "zorro",
+      "pregunta": "pregunta4",
+      "texto_conector": "La Mariposa ríe suave. 'El Zorro te espera allá, con otra pregunta.'"
+    },
+    "alternativa_buho_p1": {
+      "origen": "tortuga_pregunta4_ignorar",
+      "animal": "buho",
+      "pregunta": "pregunta1",
+      "texto_conector": "La Tortuga asiente. 'El Búho tiene algo que preguntarte sobre eso.'"
+    },
+    "alternativa_buho_p2": {
+      "origen": "pajaro_pregunta3_caos",
+      "animal": "buho",
+      "pregunta": "pregunta2",
+      "texto_conector": "El Pájaro se ríe. 'Eso es para el Búho. Él piensa distinto.'"
+    },
+    "alternativa_buho_p3": {
+      "origen": "mariposa_pregunta3_algunas",
+      "animal": "buho",
+      "pregunta": "pregunta3",
+      "texto_conector": "La Mariposa tiembla. 'El Búho sabe de esas cosas. Buscalo.'"
+    },
+    "alternativa_tortuga_p2": {
+      "origen": "pajaro_pregunta4_no_se",
+      "animal": "tortuga",
+      "pregunta": "pregunta2",
+      "texto_conector": "El Pájaro se posa. 'Mejor que la Tortuga te pregunte eso.'"
+    },
+    "alternativa_tortuga_p5": {
+      "origen": "zorro_pregunta3_depende_grupo",
+      "animal": "tortuga",
+      "pregunta": "pregunta5",
+      "texto_conector": "El Zorro sonríe. 'Esa respuesta se la debés a la Tortuga.'"
+    },
+    "alternativa_mariposa_p1": {
+      "origen": "zorro_pregunta4_me_cuesta",
+      "animal": "mariposa",
+      "pregunta": "pregunta1",
+      "texto_conector": "El Zorro mueve la cola. 'La Mariposa te espera. Ella también pasó por eso.'"
+    },
+    "alternativa_pajaro_p1": {
+      "origen": "buho_pregunta4_me_cuesta",
+      "animal": "pajaro",
+      "pregunta": "pregunta1",
+      "texto_conector": "El Búho cierra los ojos. 'El Pájaro sabe de vuelos difíciles. Anda a preguntarle.'"
+    }
+  }
+}

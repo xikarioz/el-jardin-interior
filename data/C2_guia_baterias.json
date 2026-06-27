@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "titulo": "Guía de Baterías - Diálogos por Zona",
+    "descripcion": "Diálogos de guía terapéutica para cada zona del jardín. Frases diseñadas para orientar sin parecer tests ni evaluaciones."
+  },
+  "jardin-central": {
+    "entrada": "El centro del jardín. Las flores que plantaste empiezan a despertar. Cada pétalo es un paso que diste.",
+    "durante": "El jardín central respira con vos. Fíjate cómo las flores más cercanas brillan cuando respirás hondo.",
+    "logro": "El centro ya no es gris. Las flores se abren como si te conocieran de antes.",
+    "dificultad": "A veces el centro del jardín también se nubla. Como las dudas. Pero ya sabés cómo volver a plantear luz."
+  },
+  "bosque-atencion": {
+    "entrada": "Mirá estas flores... cambian de color muy rápido ¿podés seguirles el ritmo?",
+    "durante": "Ahora solo las rojas, ahora las azules. Los colores van y vienen como los pensamientos.",
+    "logro": "¡Viste! Tu atención es más rápida que el viento. Las flores ya no se escapan.",
+    "dificultad": "Las flores se mueven más rápido cuando crecés. No importa si alguna se pierde. Volvé a mirar."
+  },
+  "lago-emociones": {
+    "entrada": "El lago cambia de color según se acerca tu mano. ¿Qué color ves hoy?",
+    "durante": "Las ondas en el agua van y vienen. No tenés que detenerlas. Solo verlas pasar.",
+    "logro": "El lago se calmó. No porque dejaste de sentir, sino porque aprendiste a mirar sin hundirte.",
+    "dificultad": "A veces el lago se agita fuerte. Las olas taparán todo. No nades contra ellas. Esperá. Pasan."
+  },
+  "pradera-memoria": {
+    "entrada": "Cada flor en esta pradera guarda un recuerdo. Algunas huelen bien. Otras tienen espinas.",
+    "durante": "Podés detenerte en la flor que quieras. Olerla. Dejarla. O llevarla con vos un rato.",
+    "logro": "Ya no necesitás visitar todas las flores. Elegís cuáles merecen tu tiempo.",
+    "dificultad": "Hay recuerdos que duelen como espinas. No hace falta arrancarlos de cuajo. A veces basta con no regarlos."
+  },
+  "cueva-reflexion": {
+    "entrada": "Adentro de la cueva, cada palabra que decís vuelve a vos. Como un eco. Como si el jardín quisiera escucharte de verdad.",
+    "durante": "No hay apuro. Las paredes de la cueva tienen toda la paciencia del mundo. Decí lo que necesites.",
+    "logro": "La cueva ya no es oscura. Las palabras que dijiste iluminaron las paredes. Cada eco es una verdad que soltaste.",
+    "dificultad": "A veces la cueva se queda en silencio. Ese silencio también es respuesta. No hace falta llenarlo todo con palabras."
+  },
+  "rio-fluir": {
+    "entrada": "El río corre sin preguntarse a dónde va. ¿Podés cruzar una piedra a la vez, sin mirar todas a la vez?",
+    "durante": "Un paso firme. Después otro. El agua empuja pero vos ya sabés mantener el equilibrio.",
+    "logro": "Llegaste al otro lado. Mirá para atrás. Las piedras que pisaste ya no están. Pero vos estás acá.",
+    "dificultad": "La corriente puede ser fuerte. Si una piedra se mueve, buscá la siguiente. No hay un camino único."
+  },
+  "mirador-perspectiva": {
+    "entrada": "Desde acá se ve todo el jardín. Las partes que brillan y las que todavía están en sombra.",
+    "durante": "Mirá lo que construiste. Cada zona restaurada. Ahora se ve distinto desde arriba, ¿no?",
+    "logro": "Desde el mirador entendés que las partes grises también son parte del jardín. No las ves más chicas. Las ves en contexto.",
+    "dificultad": "A veces subir al mirador da vértigo. Ver todo junto puede abrumar. Respirá. Mirá de a un sector."
+  },
+  "sendero-aceptacion": {
+    "entrada": "Este sendero no rodea las piedras. Las atraviesa. No hay prisa. Cada paso es una elección.",
+    "durante": "Las piedras no desaparecen. Pero aprendés a pisar entre ellas sin lastimarte tanto.",
+    "logro": "El sendero no cambió. Cambiaste vos. Ahora caminás igual, pero el peso es otro.",
+    "dificultad": "Algunas piedras son filosas. Duele pisarlas. Podés parar un momento. El sendero no se cierra."
+  },
+  "colina-esperanza": {
+    "entrada": "Desde la colina se ve el horizonte. Las nubes se están abriendo. El sol quiere pasar.",
+    "durante": "Mirá cómo la luz llega primero a las zonas que restauraste. Como si el jardín te devolviera lo que le diste.",
+    "logro": "La colina ya no es la última zona. Es la puerta a algo nuevo. El jardín terminó una etapa. Y vos también.",
+    "dificultad": "A veces la colina parece más empinada de lo que recordás. No importa. Cada paso hacia arriba ya es horizonte."
+  }
+}

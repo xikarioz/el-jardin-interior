@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "titulo": "Textos de Contención Emocional",
+    "version": "1.0",
+    "descripcion": "Banco de frases terapéuticas categorizadas por contexto emocional. Mínimo 15 por categoría. Diseñadas para sostener al paciente sin interpretar ni juzgar.",
+    "total_frases": 108,
+    "categorias": ["frustracion", "logro", "confusion", "exploracion", "tristeza", "curiosidad"]
+  },
+  "frustracion": {
+    "descripcion": "Cuando el paciente se enfrenta a dificultades, errores o bloqueos en el jardín.",
+    "frases": [
+      "Está bien. A veces las flores tardan en abrirse.",
+      "¿Querés intentar de nuevo o preferís otro camino?",
+      "Acá no hay errores. Solo formas diferentes de aprender.",
+      "Esa piedra no está para saltarla. Está para que te sientes un momento.",
+      "El jardín no se ofende si te tomás un descanso.",
+      "Lo que no sale hoy, sale mañana. La tierra sigue ahí.",
+      "¿Sabés qué? Hasta los árboles más altos crecieron despacio.",
+      "No hace falta que salga perfecto. Solo que salga.",
+      "Esa hoja seca no arruina el árbol. Es parte de él.",
+      "Apretá más fuerte no hace que la semilla crezca más rápido.",
+      "El viento también es parte del jardín. No lo controlás, lo atravesás.",
+      "Cada vez que volvés a intentarlo, algo en el jardín cambia.",
+      "No hay atajos. Pero hay muchas rutas.",
+      "Lo que sentís ahora es parte del camino. No el final del camino.",
+      "Respiramos juntos un momento. Después vemos.",
+      "El jardín también tuvo días difíciles. Y acá está.",
+      "¿Querés que lo intentemos de otra forma?",
+      "No es que no puedas. Es que esta manera no era la tuya."
+    ],
+    "total": 18
+  },
+  "logro": {
+    "descripcion": "Cuando el paciente completa una zona, supera un desafío o alcanza un hito.",
+    "frases": [
+      "¡Mirá cómo brillan las flores! Eso hiciste.",
+      "Eso que lograste queda en el jardín para siempre.",
+      "¿Viste? Apareció solo cuando dejaste de forzarlo.",
+      "Las flores nuevas son tuyas. Cada una.",
+      "No fue suerte. Fue constancia. Fijate lo que creció.",
+      "Ese sendero no estaba antes. Lo creaste.",
+      "El jardín tiene un color nuevo desde que llegaste.",
+      "Mirá para atrás. ¿Ves cuánto caminaste?",
+      "Eso que hiciste hoy. No es poco. Es un montón.",
+      "Las raíces ya están firmes. El resto viene solo.",
+      "¿Escuchás ese sonido? Es el jardín celebrando.",
+      "Tu esfuerzo ya es parte de esta tierra.",
+      "No es magia. Es trabajo. Y se nota.",
+      "Esa flor no existía antes de que llegaras.",
+      "Hoy el jardín está más vivo que ayer. Gracias a vos.",
+      "Eso que parecía imposible ahora es parte del paisaje.",
+      "Las mariposas llegaron solas. Siempre llegan cuando algo florece.",
+      "No hiciste todo perfecto. Hiciste todo. Eso es más importante."
+    ],
+    "total": 18
+  },
+  "confusion": {
+    "descripcion": "Cuando el paciente no entiende qué hacer, cómo seguir o qué significa algo.",
+    "frases": [
+      "No hay apuro. El jardín entiende.",
+      "A veces no saber también es una respuesta.",
+      "Las nubes también son parte del cielo. No las apartes. Dejalas pasar.",
+      "No hace falta entender todo ahora. Solo el próximo paso.",
+      "El laberinto no está para salir ya. Está para caminarlo.",
+      "¿Qué ves que no entiendas? Describímelo sin apuro.",
+      "Si no sabés qué hacer, empezá por lo más chico.",
+      "La confusión es el primer paso para entender distinto.",
+      "Podés quedarte acá el tiempo que necesites.",
+      "No hay una sola forma de leer este jardín.",
+      "Está bien no tener la respuesta. La pregunta también vale.",
+      "El camino no siempre está marcado. A veces hay que pisar pastito nuevo.",
+      "Si algo no tiene sentido ahora, tal vez lo tenga más adelante.",
+      "No estás perdido. Estás en un lugar nuevo.",
+      "Preguntar también es avanzar.",
+      "Lo que no se entiende hoy se entiende mañana. O no. Y está bien.",
+      "¿Te sirve que veamos juntos lo que hay adelante?"
+    ],
+    "total": 17
+  },
+  "exploracion": {
+    "descripcion": "Cuando el paciente está descubriendo nuevas zonas, interactuando o tomando iniciativa.",
+    "frases": [
+      "¿Qué habrá detrás de ese árbol? Vamos a ver.",
+      "Nunca nadie había tocado esa flor. ¿Sentís algo distinto?",
+      "El jardín cambia según cómo lo mires. Probá otra mirada.",
+      "Cada rincón guarda algo. No todo es lo que parece.",
+      "¿Viste esa luz allá lejos? Puede ser nada. Puede ser todo.",
+      "No hay peligro. Solo descubrimiento.",
+      "Andá despacio. Las mejores cosas no están en la superficie.",
+      "Ese sonido no lo habías escuchado antes. ¿Qué te parece?",
+      "El camino se abre cuando decidís dar el primer paso.",
+      "No hace falta saber a dónde vas. Basta con ir.",
+      "A veces lo que buscas está donde menos lo esperabas.",
+      "¿Probamos por este lado? Se ve distinto.",
+      "Cada hoja que movés revela algo nuevo.",
+      "No hay mapa. El jardín se dibuja mientras caminás.",
+      "El viento trae olores de otra zona. ¿Querés seguirlo?",
+      "Lo desconocido no es enemigo. Es tierra por conocer.",
+      "¿Te animás a cerrar los ojos y dar tres pasos?",
+      "El jardín te está mostrando algo. Solo vos podés verlo."
+    ],
+    "total": 18
+  },
+  "tristeza": {
+    "descripcion": "Cuando el paciente expresa dolor, melancolía o emotividad profunda.",
+    "frases": [
+      "Acá estoy. Cuando quieras, seguimos.",
+      "No hace falta sonreír. El jardín te acepta como estás.",
+      "Las nubes grises también riegan las flores.",
+      "Lo que duele también es parte de lo que crece.",
+      "No tenés que cargar todo solo. El jardín sostiene.",
+      "Quedate acá el tiempo que necesites.",
+      "Algunas flores se cierran de noche. No significa que estén muertas.",
+      "Tu tristeza tiene un lugar acá. No la escondas.",
+      "No voy a apurarte. No voy a convencerte de nada.",
+      "A veces estar triste es estar vivo. Sintiendo.",
+      "Las lágrimas también riegan. No son enemigas del jardín.",
+      "No hay nada que arreglar ahora. Solo estar.",
+      "Ese peso que llevás... podés dejarlo un rato acá.",
+      "El silencio también es compañía.",
+      "No todo tiene solución. A veces solo necesita ser escuchado.",
+      "El jardín también llora cuando llueve. Y después florece.",
+      "Está bien no estar bien. El jardín no te pide otra cosa.",
+      "Respirá conmigo. Una vez. Otra. Acá estoy."
+    ],
+    "total": 18
+  },
+  "curiosidad": {
+    "descripcion": "Cuando el paciente muestra interés activo, formula hipótesis o se maravilla.",
+    "frases": [
+      "¡Mirá eso! Nunca lo había visto así.",
+      "¿Sabés qué? Nunca nadie preguntó eso antes.",
+      "Esa pregunta abre una puerta nueva.",
+      "El jardín también tiene secretos. Parece que encontraste uno.",
+      "¡Qué bueno que preguntes! Eso es lo mejor que podés hacer.",
+      "Cuanto más mirás, más cosas nuevas aparecen.",
+      "Esa flor cambió cuando la señalaste. Te está respondiendo.",
+      "El jardín no se acaba nunca. Siempre hay algo nuevo.",
+      "¿Viste esa forma? No es casual. El jardín tiene su propio lenguaje.",
+      "Tu curiosidad hace que el jardín esté más vivo.",
+      "Eso que notaste... yo no lo había visto. Gracias.",
+      "Cada pregunta tuya es una semilla nueva.",
+      "Los misterios del jardín se revelan a quienes se quedan a mirar.",
+      "¿Qué creés que pasa si tocamos esto?",
+      "A veces las mejores preguntas no tienen respuesta. Y son las mejores.",
+      "El jardín te está mostrando algo que solo vos podés ver.",
+      "Esa conexión que hiciste es única. No se me había ocurrido."
+    ],
+    "total": 19
+  }
+}

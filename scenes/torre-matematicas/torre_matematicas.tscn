@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://torremat001"]
+
+[ext_resource type="Script" path="res://scripts/companions/AnimalCompanion.gd" id="1"]
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/0 = 0
+0:name = "placeholder"
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(32, 32)
+
+[node name="TorreMatematicas" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+cell_size = Vector2(32, 32)
+format = 1
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(0, 160)
+
+[node name="MariposaNPC" type="Node2D" parent="."]
+position = Vector2(256, 256)
+script = ExtResource("1")
+animal_type = 3
+companion_name = "Mariposa"
+activation_radius = 200.0
+
+[node name="PuzzleZones" type="Node" parent="."]
+
+[node name="Piso1Sumas" type="Area2D" parent="PuzzleZones"]
+position = Vector2(256, 384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Piso1Sumas"]
+shape = SubResource("2")
+
+[node name="Piso2Restas" type="Area2D" parent="PuzzleZones"]
+position = Vector2(256, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Piso2Restas"]
+shape = SubResource("2")
+
+[node name="Piso3Mult" type="Area2D" parent="PuzzleZones"]
+position = Vector2(256, 896)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Piso3Mult"]
+shape = SubResource("2")
+
+[node name="Piso4Div" type="Area2D" parent="PuzzleZones"]
+position = Vector2(256, 1152)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Piso4Div"]
+shape = SubResource("2")
+
+[node name="Piso5Terrace" type="Area2D" parent="PuzzleZones"]
+position = Vector2(256, 1440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Piso5Terrace"]
+shape = SubResource("2")
+
+[node name="PuzzleFinal" type="Area2D" parent="PuzzleZones"]
+position = Vector2(544, 1440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/PuzzleFinal"]
+shape = SubResource("2")
+
+[node name="Conexiones" type="Node" parent="."]
+
+[node name="SalidaJardin" type="Area2D" parent="Conexiones"]
+position = Vector2(0, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaJardin"]
+shape = SubResource("3")
+
+[node name="SalidaRio" type="Area2D" parent="Conexiones"]
+position = Vector2(480, 1568)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaRio"]
+shape = SubResource("3")
+
+[node name="SalidaMontana" type="Area2D" parent="Conexiones"]
+position = Vector2(1088, 896)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaMontana"]
+shape = SubResource("3")
+
+[node name="SalidaValle" type="Area2D" parent="Conexiones"]
+position = Vector2(480, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaValle"]
+shape = SubResource("3")
+
+[node name="SalidaCamino" type="Area2D" parent="Conexiones"]
+position = Vector2(1088, 256)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaCamino"]
+shape = SubResource("3")

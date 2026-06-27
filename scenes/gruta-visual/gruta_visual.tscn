@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3 uid="uid://grutavsl001"]
+
+[ext_resource type="Script" path="res://scripts/companions/AnimalCompanion.gd" id="1"]
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/0 = 0
+0:name = "placeholder"
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(32, 32)
+
+[node name="GrutaVisual" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+cell_size = Vector2(32, 32)
+format = 1
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(1408, 704)
+
+[node name="ZorroNPC" type="Node2D" parent="."]
+position = Vector2(704, 704)
+script = ExtResource("1")
+animal_type = 1
+companion_name = "Zorro"
+activation_radius = 200.0
+
+[node name="PuzzleZones" type="Node" parent="."]
+
+[node name="CamaraEspejo1" type="Area2D" parent="PuzzleZones"]
+position = Vector2(160, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CamaraEspejo1"]
+shape = SubResource("2")
+
+[node name="CamaraEspejo2" type="Area2D" parent="PuzzleZones"]
+position = Vector2(1216, 256)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CamaraEspejo2"]
+shape = SubResource("2")
+
+[node name="CamaraEspejo3" type="Area2D" parent="PuzzleZones"]
+position = Vector2(480, 704)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CamaraEspejo3"]
+shape = SubResource("2")
+
+[node name="CamaraEspejo4" type="Area2D" parent="PuzzleZones"]
+position = Vector2(160, 1216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CamaraEspejo4"]
+shape = SubResource("2")
+
+[node name="CamaraEspejo5" type="Area2D" parent="PuzzleZones"]
+position = Vector2(1216, 1216)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/CamaraEspejo5"]
+shape = SubResource("2")
+
+[node name="Conexiones" type="Node" parent="."]
+
+[node name="SalidaJardin" type="Area2D" parent="Conexiones"]
+position = Vector2(1440, 704)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaJardin"]
+shape = SubResource("3")
+
+[node name="SalidaValle" type="Area2D" parent="Conexiones"]
+position = Vector2(0, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaValle"]
+shape = SubResource("3")
+
+[node name="SalidaTorre" type="Area2D" parent="Conexiones"]
+position = Vector2(640, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaTorre"]
+shape = SubResource("3")
+
+[node name="SalidaCamino" type="Area2D" parent="Conexiones"]
+position = Vector2(640, 1440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaCamino"]
+shape = SubResource("3")

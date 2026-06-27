@@ -1,0 +1,121 @@
+[gd_scene load_steps=4 format=3 uid="uid://montanarzn001"]
+
+[ext_resource type="Script" path="res://scripts/companions/AnimalCompanion.gd" id="1"]
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/0 = 0
+0:name = "placeholder"
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(32, 32)
+
+[node name="MontanaRazonamiento" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+cell_size = Vector2(32, 32)
+format = 1
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(0, 1120)
+
+[node name="BuhoNPC" type="Node2D" parent="."]
+position = Vector2(160, 1280)
+script = ExtResource("1")
+animal_type = 2
+companion_name = "Buho"
+activation_radius = 200.0
+
+[node name="PuzzleZones" type="Node" parent="."]
+
+[node name="WCST1" type="Area2D" parent="PuzzleZones"]
+position = Vector2(320, 960)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/WCST1"]
+shape = SubResource("2")
+
+[node name="WCST2" type="Area2D" parent="PuzzleZones"]
+position = Vector2(800, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/WCST2"]
+shape = SubResource("2")
+
+[node name="WCST3" type="Area2D" parent="PuzzleZones"]
+position = Vector2(1280, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/WCST3"]
+shape = SubResource("2")
+
+[node name="WCST4" type="Area2D" parent="PuzzleZones"]
+position = Vector2(800, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/WCST4"]
+shape = SubResource("2")
+
+[node name="BARTZone" type="Area2D" parent="PuzzleZones"]
+position = Vector2(800, 576)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/BARTZone"]
+shape = SubResource("2")
+
+[node name="ReglasMixtas" type="Area2D" parent="PuzzleZones"]
+position = Vector2(800, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/ReglasMixtas"]
+shape = SubResource("2")
+
+[node name="Checkpoints" type="Node" parent="."]
+
+[node name="CPBase" type="Area2D" parent="Checkpoints"]
+position = Vector2(160, 1280)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/CPBase"]
+shape = SubResource("3")
+
+[node name="CPWCST1" type="Area2D" parent="Checkpoints"]
+position = Vector2(320, 960)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/CPWCST1"]
+shape = SubResource("3")
+
+[node name="CPMeseta" type="Area2D" parent="Checkpoints"]
+position = Vector2(800, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/CPMeseta"]
+shape = SubResource("3")
+
+[node name="CPWCST3" type="Area2D" parent="Checkpoints"]
+position = Vector2(1280, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/CPWCST3"]
+shape = SubResource("3")
+
+[node name="Conexiones" type="Node" parent="."]
+
+[node name="SalidaRio" type="Area2D" parent="Conexiones"]
+position = Vector2(960, 1440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaRio"]
+shape = SubResource("3")
+
+[node name="SalidaValle" type="Area2D" parent="Conexiones"]
+position = Vector2(1568, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaValle"]
+shape = SubResource("3")
+
+[node name="SalidaTorre" type="Area2D" parent="Conexiones"]
+position = Vector2(0, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaTorre"]
+shape = SubResource("3")
+
+[node name="SalidaJardin" type="Area2D" parent="Conexiones"]
+position = Vector2(0, 1120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaJardin"]
+shape = SubResource("3")

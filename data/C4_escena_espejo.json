@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "titulo": "El Espejo - Momento Cumbre Terapéutico",
+    "version": "1.0",
+    "descripcion": "Escena central del Acto 3. Todos los animales reunidos guían al paciente hacia un momento de autoconocimiento. El sistema RAG conecta las palabras del paciente con personajes previos de la base de datos.",
+    "requisito_acto": "acto3_iniciado",
+    "requisito_zonas": "todas_las_zonas_completadas"
+  },
+  "ambientacion": {
+    "escenario": "jardin-central",
+    "estado_jardin": "El jardín central brilla con luz propia. Cada zona restaurada emite un pulso de color desde su dirección. Los cinco animales forman un círculo alrededor del lago, ahora calmo como vidrio.",
+    "tono": "solemne, íntimo, pausado",
+    "musica_sugerida": "cuerdas lentas con un solo piano, sin percusión",
+    "iluminacion": "dorada suave, como atardecer perpetuo"
+  },
+
+  "momentos": [
+    {
+      "id": "1-tortuga-pregunta",
+      "orden": 1,
+      "protagonista": "tortuga",
+      "texto_narracion": "La Tortuga da un paso adelante. Los otros animales guardan silencio. Ella te mira con sus ojos que parecen haber visto mil jardines antes de este.",
+      "dialogo": "Después de todo este viaje... ¿qué fue lo más difícil? No lo que hiciste. Eso lo vi. Sino lo que sentiste mientras lo hacías.",
+      "instrucciones_paciente": "El paciente responde libremente. Sin límite de tiempo. Sin opciones predefinidas.",
+      "pausa_activa": true,
+      "siguiente_condicion": "respuesta_recibida"
+    },
+    {
+      "id": "2-zorro-pregunta",
+      "orden": 2,
+      "protagonista": "zorro",
+      "texto_narracion": "El Zorro se acerca sigilosamente. Se sienta a tu lado y mira el jardín con vos, en la misma dirección.",
+      "dialogo": "Si tu jardín pudiera hablar ahora... ¿qué diría de vos? No lo que vos decís de él. Lo que él diría de vos. Pensá bien.",
+      "nota_direccion": "El Zorro busca que el paciente se vea desde afuera, desde la perspectiva de lo que construyó.",
+      "instrucciones_paciente": "Respuesta libre. El Zorro espera en silencio, sin presionar.",
+      "pausa_activa": true,
+      "siguiente_condicion": "respuesta_recibida"
+    },
+    {
+      "id": "3-buho-pregunta",
+      "orden": 3,
+      "protagonista": "buho",
+      "texto_narracion": "El Búho abre sus grandes ojos. Esta vez no parpadea. Te mira fijo, pero no es una mirada dura. Es una mirada que sostiene.",
+      "dialogo": "Tres veces durante este viaje sentiste que no podías. Tres veces seguiste. ¿Qué cambió entre el 'no puedo' y el 'seguí'?",
+      "nota_direccion": "Momento de alta intensidad emocional. Dejar espacio. El Búho cierra los ojos mientras el paciente responde.",
+      "instrucciones_paciente": "Respuesta libre. El Búho espera con los ojos cerrados.",
+      "pausa_activa": true,
+      "siguiente_condicion": "respuesta_recibida"
+    },
+    {
+      "id": "4-pajaro-tres-palabras",
+      "orden": 4,
+      "protagonista": "pajaro",
+      "texto_narracion": "El Pájaro baja revoloteando. No se posa. Se queda en el aire frente a vos, batiendo alas suavemente.",
+      "dialogo": "Tres palabras. Las primeras que vengan a tu cabeza. No las pienses. No las juzgues. Tres palabras que sean este momento para vos. Soltálas al aire.",
+      "nota_direccion": "Momento de espontaneidad. El Pájaro representa la libertad de no pensar antes de sentir.",
+      "instrucciones_paciente": "El paciente dice 3 palabras sueltas. Se almacenan para el sistema RAG.",
+      "capturar_palabras": true,
+      "campo_almacenar": "palabras_espejo",
+      "pausa_activa": false,
+      "siguiente_condicion": "palabras_recibidas"
+    },
+    {
+      "id": "5-sistema-rag-busqueda",
+      "orden": 5,
+      "protagonista": "sistema",
+      "texto_narracion": "El jardín entero parece inclinarse hacia vos. Las flores dejan de moverse. El viento se detiene. Los animales contienen la respiración.",
+      "dialogo_interno": "En algún lugar de la memoria del jardín, algo está buscando. Las tres palabras viajan como semillas al viento. Buscan a alguien que alguna vez dijo algo parecido. Que sintió algo parecido. Que estuvo donde estás.",
+      "nota_tecnica": {
+        "sistema": "RAG - Retrieval Augmented Generation",
+        "funcion": "Buscar en la base de datos de personajes previos aquellos cuyas frases o perfiles tengan mayor similitud coseno con las 3 palabras del paciente.",
+        "campo_busqueda": "palabras_espejo",
+        "indice": "personajes.frase_signatura",
+        "top_k": 3,
+        "confianza_minima": 0.6,
+        "fallback": "usar personaje genérico 'El Viajero' si no hay coincidencias suficientes"
+      },
+      "pausa_activa": true,
+      "duracion_segundos": 3,
+      "siguiente_condicion": "personaje_encontrado"
+    },
+    {
+      "id": "6-mariposa-anuncio",
+      "orden": 6,
+      "protagonista": "mariposa",
+      "texto_narracion": "La Mariposa abre las alas lentamente. Un destello de polvo dorado cae sobre el agua del lago, que empieza a brillar.",
+      "dialogo": "Eso que decís...",
+      "pausa_antes_siguiente": 2,
+      "dialogo_continuacion": "se parece mucho a...",
+      "nota_direccion": "La Mariposa hace una pausa dramática. El nombre del personaje encontrado está a punto de ser revelado.",
+      "pausa_activa": true,
+      "siguiente_condicion": "anuncio_completado"
+    },
+    {
+      "id": "7-aparicion-personaje",
+      "orden": 7,
+      "protagonista": "personaje_rag",
+      "texto_narracion": "Una figura emerge del reflejo en el lago. No es un animal. Es una persona. Alguien que también caminó por este jardín, aunque en otro tiempo. La figura se vuelve hacia vos.",
+      "reglas_generacion": {
+        "descripcion": "El personaje recuperado por RAG cobra vida. Su apariencia y frase se generan a partir de los datos en la DB.",
+        "campos_mostrar": ["nombre", "apariencia", "frase_signatura"],
+        "frase_personalizada": "Las 3 palabras del paciente se integran en la respuesta del personaje."
+      },
+      "plantilla_frase_personaje": "Estuve donde estás. {palabras_paciente} también fue mi verdad. Esto que sentís tiene nombre. Y no estás solo.",
+      "ejemplo_llenado": "Si el paciente dijo 'cansancio, esperanza, seguir': 'Estuve donde estás. Cansancio, esperanza, seguir también fue mi verdad. Esto que sentís tiene nombre. Y no estás solo.'",
+      "accion_personaje": "El personaje extiende la mano o asiente. No habla más. Solo su presencia completa el círculo.",
+      "nota_direccion": "No forzar más palabras. El silencio compartido es parte de la intervención.",
+      "pausa_activa": true,
+      "transicion_post": "El personaje se disuelve suavemente en el reflejo. El agua del lago se agita y vuelve a calmarse. La Mariposa cierra las alas. El silencio se sostiene unos segundos más.",
+      "siguiente_condicion": "acto4_iniciado"
+    }
+  ],
+
+  "post_escena": {
+    "texto_transicion": "Los animales te miran. Nadie habla. No hace falta. El jardín emite un destello tenue desde el centro. Algo cambió. Algo floreció adentro.",
+    "efecto_terapeutico": "El paciente experimenta validación y universalidad de su experiencia (factor Yalom). Sus palabras fueron escuchadas, reflejadas y honradas.",
+    "proximo_acto": "acto4"
+  }
+}

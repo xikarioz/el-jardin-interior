@@ -1,0 +1,184 @@
+[gd_scene load_steps=4 format=3 uid="uid://caminovel001"]
+
+[ext_resource type="Script" path="res://scripts/companions/AnimalCompanion.gd" id="1"]
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/0 = 0
+0:name = "placeholder"
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(32, 32)
+
+[node name="CaminoVelocidad" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+cell_size = Vector2(32, 32)
+format = 1
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(0, 160)
+
+[node name="PajaroNPC" type="Node2D" parent="."]
+position = Vector2(384, 160)
+script = ExtResource("1")
+animal_type = 5
+companion_name = "PajaroVeloz"
+activation_radius = 200.0
+
+[node name="TortugaNPC" type="Node2D" parent="."]
+position = Vector2(960, 384)
+script = ExtResource("1")
+animal_type = 0
+companion_name = "TortugaSocial"
+activation_radius = 200.0
+
+[node name="PuzzleZones" type="Node" parent="."]
+
+[node name="EstimulosRapidos" type="Node" parent="PuzzleZones"]
+
+[node name="Poste1" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(128, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste1"]
+shape = SubResource("3")
+
+[node name="Poste2" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(256, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste2"]
+shape = SubResource("3")
+
+[node name="Poste3" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(384, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste3"]
+shape = SubResource("3")
+
+[node name="Poste4" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(512, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste4"]
+shape = SubResource("3")
+
+[node name="Poste5" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(640, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste5"]
+shape = SubResource("3")
+
+[node name="Poste6" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(768, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste6"]
+shape = SubResource("3")
+
+[node name="Poste7" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(896, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste7"]
+shape = SubResource("3")
+
+[node name="Poste8" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(1024, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste8"]
+shape = SubResource("3")
+
+[node name="Poste9" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(1152, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste9"]
+shape = SubResource("3")
+
+[node name="Poste10" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(1280, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste10"]
+shape = SubResource("3")
+
+[node name="Poste11" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(1408, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste11"]
+shape = SubResource("3")
+
+[node name="Poste12" type="Area2D" parent="PuzzleZones/EstimulosRapidos"]
+position = Vector2(1536, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstimulosRapidos/Poste12"]
+shape = SubResource("3")
+
+[node name="Obstaculos" type="Node" parent="PuzzleZones"]
+
+[node name="Obs1" type="Area2D" parent="PuzzleZones/Obstaculos"]
+position = Vector2(480, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Obstaculos/Obs1"]
+shape = SubResource("3")
+
+[node name="Obs2" type="Area2D" parent="PuzzleZones/Obstaculos"]
+position = Vector2(640, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Obstaculos/Obs2"]
+shape = SubResource("3")
+
+[node name="Obs3" type="Area2D" parent="PuzzleZones/Obstaculos"]
+position = Vector2(800, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Obstaculos/Obs3"]
+shape = SubResource("3")
+
+[node name="Obs4" type="Area2D" parent="PuzzleZones/Obstaculos"]
+position = Vector2(1152, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Obstaculos/Obs4"]
+shape = SubResource("3")
+
+[node name="Obs5" type="Area2D" parent="PuzzleZones/Obstaculos"]
+position = Vector2(1408, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/Obstaculos/Obs5"]
+shape = SubResource("3")
+
+[node name="SeccionEmociones" type="Area2D" parent="PuzzleZones"]
+position = Vector2(960, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/SeccionEmociones"]
+shape = SubResource("2")
+
+[node name="SeccionSocial" type="Area2D" parent="PuzzleZones"]
+position = Vector2(1568, 192)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/SeccionSocial"]
+shape = SubResource("2")
+
+[node name="Conexiones" type="Node" parent="."]
+
+[node name="SalidaJardin" type="Area2D" parent="Conexiones"]
+position = Vector2(0, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaJardin"]
+shape = SubResource("3")
+
+[node name="SalidaTorre" type="Area2D" parent="Conexiones"]
+position = Vector2(576, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaTorre"]
+shape = SubResource("3")
+
+[node name="SalidaGruta" type="Area2D" parent="Conexiones"]
+position = Vector2(1280, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaGruta"]
+shape = SubResource("3")
+
+[node name="SalidaSecreta" type="Area2D" parent="Conexiones"]
+position = Vector2(1888, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaSecreta"]
+shape = SubResource("3")

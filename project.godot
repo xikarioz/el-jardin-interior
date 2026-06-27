@@ -1,0 +1,39 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="El Jardín Interior"
+config/description="Un jardín mágico que crece contigo — videojuego psicopedagógico"
+run/main_scene="res://scenes/jardin-central/jardin_central.tscn"
+config/features=PackedStringArray("4.3")
+config/icon="res://assets/sprites/ui/icon.png"
+
+[display]
+
+window/size/viewport_width=2732
+window/size/viewport_height=2048
+window/size/mode=2
+window/size/stretch/mode="viewport"
+window/size/stretch/aspect="keep"
+
+[input]
+
+move_left=[{key=65}, {key=16777231}]
+move_right=[{key=68}, {key=16777233}]
+move_up=[{key=87}, {key=16777232}]
+move_down=[{key=83}, {key=16777234}]
+touch/emulate_touch=false
+
+[rendering]
+
+2d/sdf/oversize=2
+2d/sdf/scale=0.5
+renderer/name="godot4"

@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://vallelenj001"]
+
+[ext_resource type="Script" path="res://scripts/companions/AnimalCompanion.gd" id="1"]
+
+[sub_resource type="TileSet" id="1"]
+tile_size = Vector2i(32, 32)
+sources/0 = 0
+0:name = "placeholder"
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(32, 32)
+
+[node name="ValleLenguaje" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+cell_size = Vector2(32, 32)
+format = 1
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(800, 1088)
+
+[node name="PajaroNPC" type="Node2D" parent="."]
+position = Vector2(800, 576)
+script = ExtResource("1")
+animal_type = 5
+companion_name = "Pajaro"
+activation_radius = 200.0
+
+[node name="PuzzleZones" type="Node" parent="."]
+
+[node name="ArbolRimas" type="Area2D" parent="PuzzleZones"]
+position = Vector2(320, 384)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/ArbolRimas"]
+shape = SubResource("2")
+
+[node name="GranLibro1" type="Area2D" parent="PuzzleZones"]
+position = Vector2(576, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/GranLibro1"]
+shape = SubResource("2")
+
+[node name="GranLibro2" type="Area2D" parent="PuzzleZones"]
+position = Vector2(960, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/GranLibro2"]
+shape = SubResource("2")
+
+[node name="GranLibro3" type="Area2D" parent="PuzzleZones"]
+position = Vector2(1280, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/GranLibro3"]
+shape = SubResource("2")
+
+[node name="EstanteSilabas" type="Area2D" parent="PuzzleZones"]
+position = Vector2(1440, 256)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuzzleZones/EstanteSilabas"]
+shape = SubResource("2")
+
+[node name="Conexiones" type="Node" parent="."]
+
+[node name="SalidaJardin" type="Area2D" parent="Conexiones"]
+position = Vector2(800, 1120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaJardin"]
+shape = SubResource("3")
+
+[node name="SalidaBosque" type="Area2D" parent="Conexiones"]
+position = Vector2(0, 320)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaBosque"]
+shape = SubResource("3")
+
+[node name="SalidaMontana" type="Area2D" parent="Conexiones"]
+position = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaMontana"]
+shape = SubResource("3")
+
+[node name="SalidaTorre" type="Area2D" parent="Conexiones"]
+position = Vector2(1440, 1120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaTorre"]
+shape = SubResource("3")
+
+[node name="SalidaGruta" type="Area2D" parent="Conexiones"]
+position = Vector2(1760, 640)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conexiones/SalidaGruta"]
+shape = SubResource("3")

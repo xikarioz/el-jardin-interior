@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "titulo": "El Jardín Interior",
+    "version": "1.0",
+    "descripcion": "Arco narrativo principal del viaje terapéutico"
+  },
+  "actos": [
+    {
+      "id": "acto1",
+      "nombre": "El Despertar",
+      "resumen": "El paciente llega al jardín. Todo está seco, gris, las flores marchitas. La Tortuga lo recibe con calma y le ofrece la primera semilla.",
+      "escenas": [
+        {
+          "id": "llegada",
+          "texto": "Un jardín enorme, pero dormido. Las flores inclinan la cabeza como si soñaran. El cielo es gris suave. No hay viento.",
+          "animal": null,
+          "zona": "jardin-central",
+          "condicion": "inicio",
+          "transicion_a": "encuentro-tortuga"
+        },
+        {
+          "id": "encuentro-tortuga",
+          "texto": "Del otro lado del puente roto, una tortuga levanta la cabeza muy despacio. Te ha estado esperando, parece. 'Llegaste. El jardín te necesitaba. Y vos también, quizás.'",
+          "animal": "tortuga",
+          "zona": "jardin-central",
+          "condicion": "llegada_completada",
+          "transicion_a": "primera-semilla"
+        },
+        {
+          "id": "primera-semilla",
+          "texto": "La Tortuga te da una semilla que brilla suavemente. 'Plantala donde sientas que falta algo. El jardín responde a lo que llevás adentro.'",
+          "animal": "tortuga",
+          "zona": "jardin-central",
+          "condicion": "encuentro_tortuga_completado",
+          "transicion_a": "plantacion-inicial"
+        },
+        {
+          "id": "plantacion-inicial",
+          "texto": "Elegís un rincón. La tierra está seca. La semilla tibia en tu mano. La plantás. Una luz tenue brota del suelo. El jardín acaba de despertar.",
+          "animal": null,
+          "zona": "jardin-central",
+          "condicion": "semilla_recibida",
+          "transicion_a": "acto2"
+        }
+      ]
+    },
+    {
+      "id": "acto2",
+      "nombre": "El Viaje",
+      "resumen": "Exploración de las 8 zonas. Cada zona tiene un desafío emocional. Conocés animales que te guían con preguntas y ejercicios. Cada zona restaurada ilumina un sector del jardín central.",
+      "escenas": [
+        {
+          "id": "bosque-atencion",
+          "texto": "Un bosque donde las hojas susurran en colores. Cada árbol cambia de tono cuando lo mirás. El Zorro aparece entre las ramas: '¿Podés ver el rojo entre los verdes? Es como encontrar un pensamiento en medio del ruido.'",
+          "animal": "zorro",
+          "zona": "bosque-atencion",
+          "condicion": "acto2_iniciado",
+          "transicion_a": null
+        },
+        {
+          "id": "lago-emociones",
+          "texto": "Un lago de aguas cambiantes. A veces calmo, a veces tormentoso. La superficie refleja no el cielo, sino cómo te sentís. La Mariposa revolotea sobre el agua: 'Cada emoción es una ola. No tenés que detenerla. Solo sentirla pasar.'",
+          "animal": "mariposa",
+          "zona": "lago-emociones",
+          "condicion": "bosque-atencion_completado",
+          "transicion_a": null
+        },
+        {
+          "id": "pradera-memoria",
+          "texto": "Una pradera infinita donde cada flor guarda un recuerdo. Algunas flores tienen pétalos rotos. Otras brillan intensamente. El Búho está posado en una rama baja: 'No todos los recuerdos merecen ocupar tu presente. Podés elegir cuáles regar.'",
+          "animal": "buho",
+          "zona": "pradera-memoria",
+          "condicion": "lago-emociones_completado",
+          "transicion_a": null
+        },
+        {
+          "id": "cueva-reflexion",
+          "texto": "Una cueva profunda. Adentro hay ecos. Cada palabra que decís vuelve transformada. La Tortuga te alcanza dentro de la cueva: 'Acá las paredes escuchan de verdad. No hay apuro. Decí lo que necesites.'",
+          "animal": "tortuga",
+          "zona": "cueva-reflexion",
+          "condicion": "pradera-memoria_completado",
+          "transicion_a": null
+        },
+        {
+          "id": "rio-fluir",
+          "texto": "Un río de corriente constante. Piedras que pisar para cruzarlo. El agua canta. El Pájaro vuela de piedra en piedra: 'El secreto no es luchar contra la corriente. Es moverse con ella. Un paso a la vez.'",
+          "animal": "pajaro",
+          "zona": "rio-fluir",
+          "condicion": "cueva-reflexion_completado",
+          "transicion_a": null
+        },
+        {
+          "id": "mirador-perspectiva",
+          "texto": "Desde lo alto del mirador se ve todo el jardín. Las zonas restauradas brillan como joyas. Las que faltan, puntos grises. El Zorro se sienta a tu lado: 'A veces hay que subir para entender lo que vivimos allá abajo.'",
+          "animal": "zorro",
+          "zona": "mirador-perspectiva",
+          "condicion": "rio-fluir_completado",
+          "transicion_a": null
+        },
+        {
+          "id": "sendero-aceptacion",
+          "texto": "Un sendero que serpentea entre piedras y plantas espinosas. No hay manera de evitarlas, solo atravesarlas con cuidado. La Mariposa se posa en una flor seca: 'No todo en el jardín florece. Algunas partes son así nomás. Y está bien.'",
+          "animal": "mariposa",
+          "zona": "sendero-aceptacion",
+          "condicion": "mirador-perspectiva_completado",
+          "transicion_a": null
+        },
+        {
+          "id": "colina-esperanza",
+          "texto": "La última zona. Una colina desde donde el sol empieza a filtrarse. El Búho extiende sus alas: 'Mirá lo que construiste. Cada flor, cada zona restaurada. Esto es tuyo. Y hay más por venir.'",
+          "animal": "buho",
+          "zona": "colina-esperanza",
+          "condicion": "sendero-aceptacion_completado",
+          "transicion_a": "acto3"
+        }
+      ]
+    },
+    {
+      "id": "acto3",
+      "nombre": "El Espejo",
+      "resumen": "Todos los animales se reúnen. Es el momento cumbre. Las preguntas profundas, la aparición del personaje que refleja al paciente. El jardín entero contiene la respiración.",
+      "escenas": [
+        {
+          "id": "reunion-en-el-centro",
+          "texto": "Los cinco animales te esperan en el jardín central, que ahora brilla con luz propia. La Tortuga habla primero.",
+          "animal": "tortuga",
+          "zona": "jardin-central",
+          "condicion": "acto3_iniciado",
+          "transicion_a": "pregunta-tortuga"
+        },
+        {
+          "id": "pregunta-tortuga",
+          "texto": "'Después de todo este viaje... ¿qué fue lo más difícil? No lo que hiciste, sino lo que sentiste mientras lo hacías.' La Tortuga te mira con sus ojos antiguos. 'No hay respuesta incorrecta. Solo la tuya.'",
+          "animal": "tortuga",
+          "zona": "jardin-central",
+          "condicion": "reunion_iniciada",
+          "transicion_a": "pregunta-zorro"
+        },
+        {
+          "id": "pregunta-zorro",
+          "texto": "El Zorro da un paso al frente. 'Si tu jardín pudiera hablar ahora, ¿qué diría de vos? No lo que vos decís de él. Lo que él diría de vos.'",
+          "animal": "zorro",
+          "zona": "jardin-central",
+          "condicion": "tortuga_pregunta_respondida",
+          "transicion_a": "pregunta-buho"
+        },
+        {
+          "id": "pregunta-buho",
+          "texto": "El Búho abre sus grandes ojos. 'Tres veces durante este viaje sentiste que no podías. Tres veces seguiste. ¿Qué cambió entre el 'no puedo' y el 'seguí'?' Cierra los ojos. 'Pensá bien. Eso es importante.'",
+          "animal": "buho",
+          "zona": "jardin-central",
+          "condicion": "zorro_pregunta_respondida",
+          "transicion_a": "tres-palabras"
+        },
+        {
+          "id": "tres-palabras",
+          "texto": "El Pájaro revolotea nervioso. 'Tres palabras. Las primeras que vengan. No las pienses. Tres palabras que sean este momento para vos.' El Pájaro espera.",
+          "animal": "pajaro",
+          "zona": "jardin-central",
+          "condicion": "buho_pregunta_respondida",
+          "transicion_a": "busqueda-personaje"
+        },
+        {
+          "id": "busqueda-personaje",
+          "texto": "El jardín entero parece inclinarse. La Mariposa cierra las alas. Los otros animales guardan silencio. En algún lugar de la memoria del jardín, algo está buscando. Alguien que dijo algo parecido alguna vez.",
+          "animal": "mariposa",
+          "zona": "jardin-central",
+          "condicion": "palabras_recibidas",
+          "transicion_a": "anuncio-mariposa"
+        },
+        {
+          "id": "anuncio-mariposa",
+          "texto": "La Mariposa abre las alas lentamente. 'Eso que decís... se parece mucho a...' El jardín brilla. Una figura comienza a formarse entre las flores. 'Alguien que también caminó por este jardín. Alguien que dijo algo muy parecido.'",
+          "animal": "mariposa",
+          "zona": "jardin-central",
+          "condicion": "busqueda_completada",
+          "transicion_a": "aparicion-personaje"
+        },
+        {
+          "id": "aparicion-personaje",
+          "texto": "La figura se define. No es un animal. Es un reflejo. Un personaje de la memoria del jardín que alguna vez sintió algo similar. El personaje habla: sus palabras son un eco de las que el paciente dijo antes. 'Estuve donde estás. Esto que sentís tiene nombre. Y no estás solo.'",
+          "animal": null,
+          "zona": "jardin-central",
+          "condicion": "mariposa_anuncio_completado",
+          "transicion_a": "acto4"
+        }
+      ]
+    },
+    {
+      "id": "acto4",
+      "nombre": "El Florecimiento",
+      "resumen": "El jardín restaurado florece por completo. El paciente ve su propio reflejo en el agua del lago central. Los animales se despiden. El ciclo se cierra.",
+      "escenas": [
+        {
+          "id": "el-jardin-florece",
+          "texto": "Una oleada de color recorre el jardín desde el centro hacia los bordes. Cada zona restaurada brilla en sincronía. Las flores se abren. El cielo se aclara. El jardín está completo.",
+          "animal": null,
+          "zona": "jardin-central",
+          "condicion": "acto4_iniciado",
+          "transicion_a": "el-reflejo"
+        },
+        {
+          "id": "el-reflejo",
+          "texto": "La Tortuga te guía al lago central, ahora calmo como un espejo. 'Mirá.' En el agua no se refleja tu rostro exactamente. Se refleja una versión de vos con flores en el pelo y luz en los ojos. 'Ese también sos vos. El que siempre estuvo. El jardín solo te ayudó a verte.'",
+          "animal": "tortuga",
+          "zona": "lago-emociones",
+          "condicion": "jardin_florecido",
+          "transicion_a": "despedida-animales"
+        },
+        {
+          "id": "despedida-animales",
+          "texto": "Los animales se acercan uno por uno. La Tortuga deja una pluma. El Zorro una piedra brillante. El Búho una hoja seca. El Pájaro una canción. La Mariposa un destello de polvo dorado. 'Llevate esto. El jardín siempre está acá. Pero ahora también está en vos.'",
+          "animal": "tortuga",
+          "zona": "jardin-central",
+          "condicion": "reflejo_visto",
+          "transicion_a": "cierre"
+        },
+        {
+          "id": "cierre",
+          "texto": "El jardín se queda en silencio, pero no es un silencio vacío. Es un silencio lleno. Las flores se mecen. Una brisa suave. El jardín ya no está dormido. Está vivo. Y vos también.",
+          "animal": null,
+          "zona": "jardin-central",
+          "condicion": "despedida_completada",
+          "transicion_a": null
+        }
+      ]
+    }
+  ]
+}
