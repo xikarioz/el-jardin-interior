@@ -1,0 +1,62 @@
+[
+  {
+    "page": 81,
+    "text": "Después del Camino del Viento, el jardín se abre en un claro inmenso. En el centro está el Árbol del Saber, completamente florecido: cada rama cubierta de hojas verdes y brillantes, flores de todos los colores. Alrededor del árbol, formando un círculo perfecto, están los seis animales. La Tortuga, el Zorro, el Búho, el Pájaro, el Caracol, la Mariposa. Nadie habla. Todos te miran. No es una mirada que juzgue: es una mirada que reconoce.",
+    "animal": "tortuga",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 82,
+    "text": "La Tortuga se incorpora lentamente y da unos pasos al centro del círculo. «Te vi atravesar el claro. Te vi detenerte frente a las flores que confunden. Te vi respirar antes de responder. Te vi equivocarte y volver a intentar.» Hace una pausa. Sus ojos pequeños y brillantes se fijan en los tuyos. «Ahora quiero preguntarte algo. ¿Qué es lo que más te gusta de cómo resolvés las cosas?» El Árbol del Saber deja caer una flor que gira hasta posarse entre vos y la Tortuga.",
+    "animal": "tortuga",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 83,
+    "text": "El Zorro ocupa el lugar de la Tortuga. Se sienta frente a vos, cruza las patas, y te mira con sus ojos oblicuos. «La Tortuga preguntó por lo que te gusta. Yo voy a preguntar por otra cosa.» Su cola se mueve como un péndulo. «¿Qué es lo que menos te gusta de cómo resolvés las cosas?» No hay juicio en sus ojos, solo atención completa. «No pregunto para que te sientas mal. Pregunto porque lo que no nos gusta de nosotros mismos también dice algo.»",
+    "animal": "zorro",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 84,
+    "text": "El Búho despliega las alas y planea hasta el centro. Gira la cabeza casi por completo y te mira con una intensidad profunda. «La Tortuga preguntó por lo que te gusta. El Zorro por lo que no. Yo quiero preguntarte algo distinto. Si tu forma de ser fuera un personaje de esos que conocés de libros, historias o películas... ¿cuál sería?» No tiene que ser un héroe. Puede ser alguien que duda, que se equivoca, que vuelve a intentar. «A veces nos vemos mejor cuando nos miramos de costado.»",
+    "animal": "buho",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 85,
+    "text": "El Pájaro se lanza en vuelo recto y se detiene frente a vos, batiendo las alas. «Bueno, escuchá. La Tortuga preguntó lo que te gusta. El Zorro lo que no. El Búho preguntó por un personaje. Yo voy a hacer una pregunta más corta. Pero no es más fácil. Tres palabras. Solamente tres. Que te describan. Ahora, en este momento, si tuvieras que elegir tres palabras para decir cómo sos, ¿cuáles serían?» Las primeras que vengan. Las que están más cerca.",
+    "animal": "pajaro",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 86,
+    "text": "El Caracol baja lentamente de su hoja en espiral. Su cuerpo brillante deja un rastro plateado en la tierra. Tarda en llegar al centro, pero nadie se impacienta. «Te vi desde arriba todo este tiempo. Cuando dudabas, cuando seguías, cuando te detenías a mirar. Vi todo.» Hace una pausa. «Quiero preguntarte algo que tal vez sea lo más difícil. ¿Qué fue lo más difícil del viaje?» No hace falta que respondas ahora. «Los caracoles no tenemos apuro.»",
+    "animal": "caracol",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 87,
+    "text": "La Mariposa sigue inmóvil en su flor, pero sus alas empiezan a moverse lentamente. En cada ala hay un dibujo: un ojo que mira, una espiral que gira, una flor que se abre, una estrella que brilla. Flota hacia el centro del círculo, cambiando de color según la luz. Se detiene frente a tu pecho. Detrás de ella, el Árbol del Saber empieza a brillar desde adentro. «Todo lo que dijeron los demás, todo lo que respondiste, todo lo que fuiste en este viaje... el jardín lo escuchó.»",
+    "animal": "mariposa",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 88,
+    "text": "La Mariposa se eleva y bate las alas tres veces. Cada vez el árbol emite un pulso de luz. En la tercera vez, la corteza del Árbol del Saber empieza a moverse: los surcos se reacomodan, se juntan, forman una imagen. Al principio es borrosa, como un recuerdo que está volviendo. Luego se vuelve más clara. Es una figura que se parece a vos. No en lo físico, sino en la forma de enfrentar las cosas. «Esa figura está ahí porque vos, con cada paso, la hiciste aparecer.»",
+    "animal": "mariposa",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 89,
+    "text": "La Mariposa desciende y se posa en el borde de la imagen. «Eso que ves ahí se parece mucho a alguien que también caminó por el mundo a su manera. Alguien que, como vos, tuvo que encontrar su propio camino.» El nombre aparece en la imagen, escrito con luz entre las ramas. «Alguien que también tuvo que ser paciente, ser valiente, preguntar mucho, no rendirse, mirar el mundo de una manera distinta.» Algo se conecta adentro tuyo. Un hilo invisible que siempre estuvo ahí.",
+    "animal": "mariposa",
+    "mechanic": "escena-espejo"
+  },
+  {
+    "page": 90,
+    "text": "La imagen en el tronco tiembla. La luz se intensifica hasta volverse blanca, y cuando baja, el personaje ya no está en el tronco: está entre las ramas del Árbol, una silueta luminosa. «Hola. No sabía que me estabas buscando. Pero parece que nos encontramos.» La figura se inclina. «Vos también tenés eso. Eso que a mí me hace ser quien soy. No es exactamente igual, pero se parece.» El rastro de luz se funde con la tierra. El Árbol florece completamente. El jardín ya no tiene gris.",
+    "animal": "mariposa",
+    "mechanic": "escena-espejo"
+  }
+]

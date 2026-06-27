@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "titulo": "El Espejo — Preguntas del Capítulo 9",
+    "version": "1.0",
+    "descripcion": "Preguntas de cada animal durante la escena del Espejo bajo el Árbol del Saber. Cada pregunta está asociada a un rasgo de personalidad del modelo OCEAN para el sistema RAG.",
+    "requisito_acto": "acto3_iniciado",
+    "requisito_zonas": "capitulo_09_iniciado"
+  },
+  "ambientacion": {
+    "escenario": "arbol-del-saber",
+    "estado_jardin": "El Árbol del Saber está completamente florecido. Los seis animales forman un círculo alrededor. El jardín entero contiene la respiración.",
+    "tono": "solemne, íntimo, introspectivo",
+    "musica_sugerida": "cuerdas lentas, piano, silencios entre preguntas",
+    "iluminacion": "luz dorada que emana del árbol"
+  },
+  "preguntas": [
+    {
+      "animal": "tortuga",
+      "page": 82,
+      "texto": "¿Qué es lo que más te gusta de cómo resolvés las cosas?",
+      "trait": "conscientiousness",
+      "nota_direccion": "La Tortuga busca que el paciente reconozca sus fortalezas en la resolución de problemas. Sin apuro, sin juicio."
+    },
+    {
+      "animal": "zorro",
+      "page": 83,
+      "texto": "¿Qué es lo que menos te gusta de cómo resolvés las cosas?",
+      "trait": "extraversion",
+      "nota_direccion": "El Zorro busca que el paciente se enfrente a sus sombras con honestidad, sin sentirse juzgado."
+    },
+    {
+      "animal": "buho",
+      "page": 84,
+      "texto": "Si tu forma de ser fuera un personaje... ¿cuál sería?",
+      "trait": "openness",
+      "nota_direccion": "El Búho invita a mirarse de costado a través de un arquetipo conocido. Proyectivo, imaginativo."
+    },
+    {
+      "animal": "pajaro",
+      "page": 85,
+      "texto": "Dame tres palabras que te describan.",
+      "trait": "agreeableness",
+      "nota_direccion": "El Pájaro pide espontaneidad. Las primeras tres palabras que vengan a la cabeza. Se almacenan para el sistema RAG."
+    },
+    {
+      "animal": "caracol",
+      "page": 86,
+      "texto": "¿Qué fue lo más difícil del viaje?",
+      "trait": "neuroticism",
+      "nota_direccion": "El Caracol toca el núcleo emocional. La pregunta más honda y la que más tiempo necesita. Sin apuro."
+    }
+  ],
+  "orden_animales": ["tortuga", "zorro", "buho", "pajaro", "caracol"],
+  "post_escena": {
+    "texto_transicion": "La Mariposa desciende. Los cinco animales han preguntado. Ahora el Árbol del Saber responde con una imagen que refleja quién sos.",
+    "efecto_terapeutico": "Cada pregunta apunta a una dimensión distinta del self. El sistema RAG buscará coincidencias basadas en las 3 palabras del Pájaro.",
+    "proximo": "aparicion-personaje"
+  }
+}
