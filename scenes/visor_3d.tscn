@@ -1,0 +1,84 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctest3d"]
+
+[ext_resource type="PackedScene" path="res://assets/models/tortuga.glb" id="1"]
+[ext_resource type="PackedScene" path="res://assets/models/protagonista.glb" id="2"]
+[ext_resource type="PackedScene" path="res://assets/models/zorro.glb" id="3"]
+[ext_resource type="PackedScene" path="res://assets/models/buho.glb" id="4"]
+[ext_resource type="PackedScene" path="res://assets/models/mariposa.glb" id="5"]
+[ext_resource type="PackedScene" path="res://assets/models/caracol.glb" id="6"]
+[ext_resource type="PackedScene" path="res://assets/models/pajaro.glb" id="7"]
+[ext_resource type="Script" path="res://scripts/core/visor_3d.gd" id="8"]
+
+[sub_resource type="Environment" id="env"]
+background_color = Color(0.3, 0.6, 0.8, 1)
+ambient_light_color = Color(0.3, 0.3, 0.4, 1)
+ambient_light_energy = 0.5
+
+[node name="ElJardin3D" type="Node3D"]
+script = ExtResource("8")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("env")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.7, -0.7, 0, -0.3, 0.3, -0.9, -0.6, 0.6, 0.5, 0, 15, 0)
+light_energy = 1.5
+shadow_enabled = true
+
+[node name="Ambient" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.5, 0.5, 0.7, 0.5, -0.7, 0, 0, 0, 0.7, 0, 5, 0)
+light_energy = 0.3
+
+[node name="Ground" type="ColorRect" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+size = Vector2(40, 40)
+color = Color(0.2, 0.5, 0.2, 1)
+
+[node name="CameraPivot" type="Node3D" parent="."]
+position = Vector3(0, 2, 10)
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+current = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Tortuga" type="Node3D" parent="."]
+position = Vector3(-1.5, 0, 0)
+
+[node name="Model" parent="Tortuga" instance=ExtResource("1")]
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="Protagonista" type="Node3D" parent="."]
+position = Vector3(1.5, 0, 0)
+
+[node name="Model" parent="Protagonista" instance=ExtResource("2")]
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="Zorro" type="Node3D" parent="."]
+position = Vector3(-3, 0, -1.5)
+
+[node name="Model" parent="Zorro" instance=ExtResource("3")]
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="Buho" type="Node3D" parent="."]
+position = Vector3(3, 0, -1.5)
+
+[node name="Model" parent="Buho" instance=ExtResource("4")]
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="Mariposa" type="Node3D" parent="."]
+position = Vector3(-1.5, 1.5, -3)
+
+[node name="Model" parent="Mariposa" instance=ExtResource("5")]
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="Caracol" type="Node3D" parent="."]
+position = Vector3(1.5, 0, -3)
+
+[node name="Model" parent="Caracol" instance=ExtResource("6")]
+scale = Vector3(0.5, 0.5, 0.5)
+
+[node name="Pajaro" type="Node3D" parent="."]
+position = Vector3(0, 0.5, -4.5)
+
+[node name="Model" parent="Pajaro" instance=ExtResource("7")]
+scale = Vector3(0.5, 0.5, 0.5)
